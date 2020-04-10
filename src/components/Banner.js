@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 
+import '../assets/css/Banner.css';
+
 class Banner extends Component {
   render() {
     const paramConfig = {
@@ -38,20 +40,13 @@ class Banner extends Component {
     };
     return (
       <div className='Banner'>
-        <Particles
-          className='mi-home-particle particles'
-          params={paramConfig}
-        />
-        <div className='container'>
-          <div className='row justify-content-center'>
-            <div className='col-12'>
-              <div className='mi-home-content banner-content'>
-                <h1>
-                  Hi, I'm <span className='color-theme'>Keaton</span>
-                </h1>
-                <p>Full-Stack Developer</p>
-              </div>
-            </div>
+        <Particles className='particles' params={paramConfig} />
+        <div className='jumbotron jumbotron-fluid'>
+          <div className='banner-content'>
+            <h1>
+              Hi, I'm <span className='color-theme'>Keaton</span>
+            </h1>
+            <h6>Full-Stack Developer</h6>
           </div>
         </div>
       </div>
