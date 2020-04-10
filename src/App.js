@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import './assets/css/main.css';
+import './assets/css/color.css';
 
 function App() {
   return (
