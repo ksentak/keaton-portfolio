@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Error from './pages/Error';
 
 import './assets/css/main.css';
-import './assets/css/color.css';
 
 function App() {
   return (

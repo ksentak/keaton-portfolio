@@ -39,13 +39,13 @@ class Navbar extends Component {
                   </NavLink>
                 </li>
                 <li>
-                  <a href='#services' className='nav-Link'>
-                    Services
+                  <a href='#about' className='nav-Link'>
+                    About
                   </a>
                 </li>
                 <li>
-                  <a href='#about' className='nav-Link'>
-                    About
+                  <a href='#portfolio' className='nav-Link'>
+                    Portfolio
                   </a>
                 </li>
                 <li>

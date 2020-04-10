@@ -46,7 +46,7 @@ class Banner extends Component {
             <h1>
               Hi, I'm <span className='color-theme'>Keaton</span>
             </h1>
-            <h6>Full-Stack Developer</h6>
+            <h6>and I am a full-stack developer</h6>
           </div>
         </div>
       </div>

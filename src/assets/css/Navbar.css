@@ -33,10 +33,14 @@ body.admin-bar .fixed-top {
   font-size: 18px;
 }
 
-.menu-item:last-child a {
+.navbar-nav a:hover {
+  color: #ff4a57;
+}
+
+/* .menu-item:last-child a {
   margin-right: 0;
   padding-right: 0;
-}
+} */
 
 .navbar-toggler {
   background: transparent !important;
@@ -47,10 +51,4 @@ body.admin-bar .fixed-top {
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(225, 225, 225, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   font-size: 24px;
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-  content: '>';
-  color: #fff;
-  margin: 0px 5px;
 }
