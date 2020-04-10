@@ -40,7 +40,7 @@ class Banner extends Component {
     };
     return (
       <div className='Banner'>
-        <Particles className='particles' params={paramConfig} />
+        <Particles className='particles' height={475} params={paramConfig} />
         <div className='jumbotron jumbotron-fluid'>
           <div className='banner-content'>
             <h1>
