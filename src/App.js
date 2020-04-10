@@ -1,16 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
-import Banner from './components/Banner';
+import Home from './pages/Home';
+import Error from './pages/Error';
+
 import './assets/css/main.css';
 import './assets/css/color.css';
 
 function App() {
   return (
-    <div className='App'>
+    <Router>
       <Navbar />
-      <Banner />
-      <h1>Hello world!</h1>
-    </div>
+      {/* <div className='App'> */}
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route component={Error} />
+      </Switch>
+      {/* </div> */}
+    </Router>
   );
 }
 
