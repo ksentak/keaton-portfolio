@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
+import Socials from './Socials';
 
 import '../assets/css/Banner.css';
 
@@ -44,9 +45,10 @@ class Banner extends Component {
         <div className='jumbotron jumbotron-fluid'>
           <div className='banner-content'>
             <h1>
-              Hi, I'm <span className='color-theme'>Keaton</span>
+              <span className='color-theme'>Keaton</span> Sentak
             </h1>
-            <h6>and I am a full-stack developer</h6>
+            <h6>Full-Stack Developer</h6>
+            <Socials />
           </div>
         </div>
       </div>
