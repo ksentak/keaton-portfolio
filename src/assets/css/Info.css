@@ -1,0 +1,16 @@
+.profile-picture {
+  height: 325px;
+  width: 400px;
+}
+
+.resume-btn {
+  background-color: #1f2235;
+  color: #fff !important;
+  padding: 18px 40px;
+  border: 2px solid #ff4a57;
+  border-radius: 100px;
+}
+
+.resume-btn:hover {
+  background-color: #ff4a57;
+}

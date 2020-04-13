@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+import '../assets/css/Info.css';
 
 import Headshot from '../assets/images/profile-headshot.jpg';
 
@@ -10,7 +13,9 @@ class Info extends Component {
           {/* Row 1 */}
           <div className='row'>
             <div className='col-12'>
-              <h1>About Me</h1>
+              <h1>
+                <span className='main-color'>About</span> Me
+              </h1>
               <div className='section-underline'></div>
             </div>
           </div>
@@ -23,7 +28,7 @@ class Info extends Component {
                 alt='Profile'
               />
             </div>
-            <div className='col-6'>
+            <div className='col-6 about-section'>
               <p className='about-text'>
                 A Full-Stack Developer and graduate of both Rutgers University
                 and the University of Pennsylvania LPS Coding Bootcamp looking
@@ -35,7 +40,9 @@ class Info extends Component {
                 collaboratively in a team setting to ensure optimal results for
                 user and technology centered designs.
               </p>
-              <button>Download Resume</button>
+              <Link to='assets/files/KeatonSentakResume.pdf' target='_blank'>
+                <button class='resume-btn'>Download Resume</button>
+              </Link>
             </div>
           </div>
         </div>
