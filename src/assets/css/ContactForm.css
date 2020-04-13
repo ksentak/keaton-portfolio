@@ -1,0 +1,29 @@
+form {
+  background: #1f2235;
+}
+
+.formRow {
+  margin: 10px 0 20px 0;
+}
+
+.formInput {
+  padding: 25px 0 25px 0;
+  background-color: #282c45;
+  border: none;
+}
+
+.formInput::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.formInput:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.formInput::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}

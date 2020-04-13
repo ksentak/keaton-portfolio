@@ -9,7 +9,7 @@ class Info extends Component {
           <div className='row'>
             <div className='col-12'>
               <h1>About Me</h1>
-              <div className='about-underline'></div>
+              <div className='section-underline'></div>
             </div>
           </div>
           {/* Row 2 */}
