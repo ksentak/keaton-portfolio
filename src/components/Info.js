@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Headshot from '../assets/images/profile-headshot.jpg';
+
 class Info extends Component {
   render() {
     return (
@@ -14,7 +16,13 @@ class Info extends Component {
           </div>
           {/* Row 2 */}
           <div className='row'>
-            <div className='col-6'>{/* image here */}</div>
+            <div className='col-6'>
+              <img
+                src={Headshot}
+                class='img-fluid profile-picture'
+                alt='Profile'
+              />
+            </div>
             <div className='col-6'>
               <p className='about-text'>
                 A Full-Stack Developer and graduate of both Rutgers University
