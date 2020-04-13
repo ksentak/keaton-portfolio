@@ -37,6 +37,10 @@ body.admin-bar .fixed-top {
   color: #ff4a57;
 }
 
+.navbar-nav .active {
+  color: #ff4a57;
+}
+
 /* .menu-item:last-child a {
   margin-right: 0;
   padding-right: 0;

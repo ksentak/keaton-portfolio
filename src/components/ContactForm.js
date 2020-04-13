@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
+// Font Awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
+// CSS
 import '../assets/css/ContactForm.css';
 
 class ContactForm extends Component {
@@ -37,18 +43,27 @@ class ContactForm extends Component {
             </div>
           </div>
           {/* Row 2 */}
-          <div className='row'>
-            <div className='col-md-4 contact-info contact-phone'>
-              <p>Give me a call:</p>
-              <p>(609) 439-3423</p>
+          <div className='row justify-content-center'>
+            <div className='col-3 contact-info'>
+              <div className='contact-phone'>
+                <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
+                <span>Give me a call:</span>
+                <p>(609) 439-3423</p>
+              </div>
             </div>
-            <div className='col-md-4 contact-info contact-email'>
-              <p>Send me an email:</p>
-              <p>keatonsentak@gmail.com</p>
+            <div className='col-3 contact-info'>
+              <div className='contact-email'>
+                <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+                <span>Send me an email:</span>
+                <p>keatonsentak@gmail.com</p>
+              </div>
             </div>
-            <div className='col-md-4 contact-info contact-address'>
-              <p>Currently located:</p>
-              <p>Greater Philadelphia Area</p>
+            <div className='col-3 contact-info'>
+              <div className='contact-address'>
+                <FontAwesomeIcon icon={faMapMarkerAlt}></FontAwesomeIcon>
+                <span>Currently located:</span>
+                <p>Greater Philadelphia Area</p>
+              </div>
             </div>
           </div>
           {/* Row 3 */}
