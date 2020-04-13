@@ -28,35 +28,60 @@ class Navbar extends Component {
               id='navbarSupportedContent'
             >
               <ul id='menu-primary' className='navbar-nav ml-auto'>
+                {/* Home */}
                 <li>
                   <NavLink
                     exact
-                    activeClassName='active'
                     to='/'
+                    activeClassName='active'
                     className='nav-Link'
                   >
                     Home
                   </NavLink>
                 </li>
+                {/* About */}
                 <li>
-                  <a href='#about' className='nav-Link'>
+                  <NavLink
+                    exact
+                    to='/about'
+                    activeClassName='active'
+                    className='nav-Link'
+                  >
                     About
-                  </a>
+                  </NavLink>
                 </li>
+                {/* Portfolio */}
                 <li>
-                  <a href='#portfolio' className='nav-Link'>
+                  <NavLink
+                    exact
+                    to='/portfolio'
+                    activeClassName='active'
+                    className='nav-Link'
+                  >
                     Portfolio
-                  </a>
+                  </NavLink>
                 </li>
+                {/* Resume */}
+                {/* <li>
+                  <NavLink
+                    exact
+                    to='/resume'
+                    activeClassName='active'
+                    className='nav-Link'
+                  >
+                    Resume
+                  </NavLink>
+                </li> */}
+                {/* Contact */}
                 <li>
-                  <a href='#skills' className='nav-Link'>
-                    Skills
-                  </a>
-                </li>
-                <li>
-                  <a href='#contact' className='nav-Link'>
+                  <NavLink
+                    exact
+                    to='/contact'
+                    activeClassName='active'
+                    className='nav-Link'
+                  >
                     Contact
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>
