@@ -6,10 +6,22 @@ form {
   margin: 10px 0 20px 0;
 }
 
+.form-control {
+  outline: none;
+}
+
 .formInput {
-  padding: 25px 0 25px 0;
+  padding: 25px 10px;
   background-color: #282c45;
   border: none;
+  color: white;
+}
+
+.formInput:focus {
+  background-color: #282c45;
+  outline: none;
+  box-shadow: 0 0 0 2px #ff4a57;
+  color: white;
 }
 
 .formInput::placeholder {

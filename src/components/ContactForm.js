@@ -3,15 +3,19 @@ import React, { Component } from 'react';
 import '../assets/css/ContactForm.css';
 
 class ContactForm extends Component {
-  state = {
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    };
+  }
 
   submitHandler = (event) => {
     event.preventDefault();
+    console.log(this.state);
     event.target.className += ' was-validated';
   };
 
@@ -61,7 +65,7 @@ class ContactForm extends Component {
                     <div className='col-6'>
                       <input
                         type='text'
-                        class='form-control formInput'
+                        className='form-control formInput'
                         id='name'
                         placeholder='Your name'
                         value={this.state.name}
@@ -73,9 +77,12 @@ class ContactForm extends Component {
                     <div className='col-6'>
                       <input
                         type='email'
-                        class='form-control formInput'
+                        className='form-control formInput'
                         id='email'
                         placeholder='Your email address'
+                        name='email'
+                        onChange={this.changeHandler}
+                        required
                       ></input>
                     </div>
                   </div>
@@ -84,9 +91,12 @@ class ContactForm extends Component {
                     <div className='col'>
                       <input
                         type='text'
-                        class='form-control formInput'
+                        className='form-control formInput'
                         id='subject'
                         placeholder='Subject'
+                        name='subject'
+                        onChange={this.changeHandler}
+                        required
                       ></input>
                     </div>
                   </div>
@@ -94,10 +104,13 @@ class ContactForm extends Component {
                   <div className='row formRow'>
                     <div className='col'>
                       <textarea
-                        class='form-control formInput'
+                        className='form-control formInput'
                         id='message'
                         placeholder='Your message'
                         rows='5'
+                        name='message'
+                        onChange={this.changeHandler}
+                        required
                       ></textarea>
                     </div>
                   </div>
