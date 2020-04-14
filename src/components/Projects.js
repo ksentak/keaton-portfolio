@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 // CSS
 import '../assets/css/Projects.css';
 // Images
@@ -160,7 +162,7 @@ class Projects extends Component {
           role='dialog'
           aria-hidden='true'
         >
-          <div className='modal-dialog modal-xl' role='document'>
+          <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
               <button
                 type='button'
@@ -177,38 +179,55 @@ class Projects extends Component {
                   <div className='row justify-content-center'>
                     <div className='col-lg-8'>
                       {/* Portfolio Modal - Title */}
-                      <h2 className='portfolio-modal-title text-secondary text-uppercase mb-0'>
+                      <h2 className='portfolio-modal-title text-uppercase mb-3'>
                         React-Colors
                       </h2>
-                      {/* Icon Divider */}
-                      <div className='divider-custom'>
-                        <div className='divider-custom-line'></div>
-                        <div className='divider-custom-icon'>
-                          <i className='fas fa-star'></i>
-                        </div>
-                        <div className='divider-custom-line'></div>
-                      </div>
                       {/* Portfolio Modal - Image */}
                       <img
-                        className='img-fluid rounded mb-5'
+                        className='img-fluid modal-img mb-3'
                         src={ReactColors}
                         alt='React Colors'
                       />
                       {/* Portfolio Modal - Text */}
-                      <p>A custom color palette site built with react.</p>
-                      <p className='mb-4'>
-                        <a
-                          href='https://ksentak.github.io/matt-walks-dogs/'
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          View Site
-                        </a>
+                      <p>
+                        A react application that allows users to view, create,
+                        and delete different color palettes. The user can copy
+                        any individual color's HEX, RGB, or RGBA code to their
+                        clipboard, as well as adjust the shade of each palette.
                       </p>
-                      <button className='btn btn-primary' data-dismiss='modal'>
-                        <i className='fas fa-times fa-fw'></i>
-                        Close Window
-                      </button>
+                      {/* Modal Links */}
+                      <div className='modal-links text-center'>
+                        <div className='view-site'>
+                          <a
+                            href='https://react-colors-01.netlify.com/'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faExternalLinkAlt}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Site
+                            </button>
+                          </a>
+                        </div>
+                        <div className='view-code'>
+                          <a
+                            href='https://github.com/ksentak/react-colors'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faCode}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Code
+                            </button>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -216,7 +235,6 @@ class Projects extends Component {
             </div>
           </div>
         </div>
-
         {/* Portfolio Modal 2 */}
         <div
           className='portfolio-modal modal fade'
@@ -225,7 +243,7 @@ class Projects extends Component {
           role='dialog'
           aria-hidden='true'
         >
-          <div className='modal-dialog modal-xl' role='document'>
+          <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
               <button
                 type='button'
@@ -242,38 +260,55 @@ class Projects extends Component {
                   <div className='row justify-content-center'>
                     <div className='col-lg-8'>
                       {/* Portfolio Modal - Title */}
-                      <h2 className='portfolio-modal-title text-secondary text-uppercase mb-0'>
-                        React-Colors
+                      <h2 className='portfolio-modal-title text-uppercase mb-3'>
+                        React User Authentication
                       </h2>
-                      {/* Icon Divider */}
-                      <div className='divider-custom'>
-                        <div className='divider-custom-line'></div>
-                        <div className='divider-custom-icon'>
-                          <i className='fas fa-star'></i>
-                        </div>
-                        <div className='divider-custom-line'></div>
-                      </div>
                       {/* Portfolio Modal - Image */}
                       <img
-                        className='img-fluid rounded mb-5'
-                        src={ReactColors}
-                        alt='React Colors'
+                        className='img-fluid modal-img mb-3'
+                        src={ReactAuth}
+                        alt='React Auth'
                       />
                       {/* Portfolio Modal - Text */}
-                      <p>A custom color palette site built with react.</p>
-                      <p className='mb-4'>
-                        <a
-                          href='https://ksentak.github.io/matt-walks-dogs/'
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          View Site
-                        </a>
+                      <p>
+                        A user authentication application I built using React,
+                        Passport, and JWT that serves as a template for others
+                        and allows a user to sign up/log in. Input validation is
+                        included in and deployment to Heroku is made easy.
                       </p>
-                      <button className='btn btn-primary' data-dismiss='modal'>
-                        <i className='fas fa-times fa-fw'></i>
-                        Close Window
-                      </button>
+                      {/* Modal Links */}
+                      <div className='modal-links text-center'>
+                        <div className='view-site'>
+                          <a
+                            href='https://react-user-auth.herokuapp.com/'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faExternalLinkAlt}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Site
+                            </button>
+                          </a>
+                        </div>
+                        <div className='view-code'>
+                          <a
+                            href='https://github.com/ksentak/react-user-auth'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faCode}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Code
+                            </button>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -290,7 +325,7 @@ class Projects extends Component {
           role='dialog'
           aria-hidden='true'
         >
-          <div className='modal-dialog modal-xl' role='document'>
+          <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
               <button
                 type='button'
@@ -307,38 +342,57 @@ class Projects extends Component {
                   <div className='row justify-content-center'>
                     <div className='col-lg-8'>
                       {/* Portfolio Modal - Title */}
-                      <h2 className='portfolio-modal-title text-secondary text-uppercase mb-0'>
-                        React-Colors
+                      <h2 className='portfolio-modal-title text-uppercase mb-3'>
+                        Liberty Beans Coffee
                       </h2>
-                      {/* Icon Divider */}
-                      <div className='divider-custom'>
-                        <div className='divider-custom-line'></div>
-                        <div className='divider-custom-icon'>
-                          <i className='fas fa-star'></i>
-                        </div>
-                        <div className='divider-custom-line'></div>
-                      </div>
                       {/* Portfolio Modal - Image */}
                       <img
-                        className='img-fluid rounded mb-5'
-                        src={ReactColors}
-                        alt='React Colors'
+                        className='img-fluid modal-img mb-3'
+                        src={LibertyBeans}
+                        alt='Liberty Beans'
                       />
                       {/* Portfolio Modal - Text */}
-                      <p>A custom color palette site built with react.</p>
-                      <p className='mb-4'>
-                        <a
-                          href='https://ksentak.github.io/matt-walks-dogs/'
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          View Site
-                        </a>
+                      <p>
+                        A small business coffee shop website that I built to
+                        display my skills in front-end web development. This
+                        website was created with a mobile-first design and a
+                        simple user interface, in order to provide a better user
+                        experience. Additionally, I developed a React version of
+                        this site.
                       </p>
-                      <button className='btn btn-primary' data-dismiss='modal'>
-                        <i className='fas fa-times fa-fw'></i>
-                        Close Window
-                      </button>
+                      {/* Modal Links */}
+                      <div className='modal-links text-center'>
+                        <div className='view-site'>
+                          <a
+                            href='https://ksentak.github.io/LB-Coffee/'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faExternalLinkAlt}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Site
+                            </button>
+                          </a>
+                        </div>
+                        <div className='view-code'>
+                          <a
+                            href='https://github.com/ksentak/LB-Coffee'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faCode}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Code
+                            </button>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -355,7 +409,7 @@ class Projects extends Component {
           role='dialog'
           aria-hidden='true'
         >
-          <div className='modal-dialog modal-xl' role='document'>
+          <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
               <button
                 type='button'
@@ -372,38 +426,56 @@ class Projects extends Component {
                   <div className='row justify-content-center'>
                     <div className='col-lg-8'>
                       {/* Portfolio Modal - Title */}
-                      <h2 className='portfolio-modal-title text-secondary text-uppercase mb-0'>
-                        React-Colors
+                      <h2 className='portfolio-modal-title text-uppercase mb-3'>
+                        Google Books
                       </h2>
-                      {/* Icon Divider */}
-                      <div className='divider-custom'>
-                        <div className='divider-custom-line'></div>
-                        <div className='divider-custom-icon'>
-                          <i className='fas fa-star'></i>
-                        </div>
-                        <div className='divider-custom-line'></div>
-                      </div>
                       {/* Portfolio Modal - Image */}
                       <img
-                        className='img-fluid rounded mb-5'
-                        src={ReactColors}
-                        alt='React Colors'
+                        className='img-fluid modal-img mb-3'
+                        src={GoogleBooks}
+                        alt='Google Books'
                       />
                       {/* Portfolio Modal - Text */}
-                      <p>A custom color palette site built with react.</p>
-                      <p className='mb-4'>
-                        <a
-                          href='https://ksentak.github.io/matt-walks-dogs/'
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          View Site
-                        </a>
+                      <p>
+                        A MERN application in which a user can search for
+                        different books using the Google Books API. Once the
+                        user searches for a specific book, results are rendered
+                        and the user can either favorite a book or view more
+                        info about the book.
                       </p>
-                      <button className='btn btn-primary' data-dismiss='modal'>
-                        <i className='fas fa-times fa-fw'></i>
-                        Close Window
-                      </button>
+                      {/* Modal Links */}
+                      <div className='modal-links text-center'>
+                        <div className='view-site'>
+                          <a
+                            href='https://google-books-app-01.herokuapp.com/'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faExternalLinkAlt}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Site
+                            </button>
+                          </a>
+                        </div>
+                        <div className='view-code'>
+                          <a
+                            href='https://github.com/ksentak/google-books-app'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faCode}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Code
+                            </button>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -420,7 +492,7 @@ class Projects extends Component {
           role='dialog'
           aria-hidden='true'
         >
-          <div className='modal-dialog modal-xl' role='document'>
+          <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
               <button
                 type='button'
@@ -437,38 +509,53 @@ class Projects extends Component {
                   <div className='row justify-content-center'>
                     <div className='col-lg-8'>
                       {/* Portfolio Modal - Title */}
-                      <h2 className='portfolio-modal-title text-secondary text-uppercase mb-0'>
-                        React-Colors
+                      <h2 className='portfolio-modal-title text-uppercase mb-3'>
+                        Omega
                       </h2>
-                      {/* Icon Divider */}
-                      <div className='divider-custom'>
-                        <div className='divider-custom-line'></div>
-                        <div className='divider-custom-icon'>
-                          <i className='fas fa-star'></i>
-                        </div>
-                        <div className='divider-custom-line'></div>
-                      </div>
                       {/* Portfolio Modal - Image */}
                       <img
-                        className='img-fluid rounded mb-5'
-                        src={ReactColors}
-                        alt='React Colors'
+                        className='img-fluid modal-img mb-3'
+                        src={Omega}
+                        alt='Omega'
                       />
                       {/* Portfolio Modal - Text */}
-                      <p>A custom color palette site built with react.</p>
-                      <p className='mb-4'>
-                        <a
-                          href='https://ksentak.github.io/matt-walks-dogs/'
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          View Site
-                        </a>
+                      <p>
+                        A full-stack MERN application which allows users to
+                        create, plan, and keep track of their weekly workouts.
                       </p>
-                      <button className='btn btn-primary' data-dismiss='modal'>
-                        <i className='fas fa-times fa-fw'></i>
-                        Close Window
-                      </button>
+                      {/* Modal Links */}
+                      <div className='modal-links text-center'>
+                        <div className='view-site'>
+                          <a
+                            href='https://omega-wo.herokuapp.com/'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faExternalLinkAlt}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Site
+                            </button>
+                          </a>
+                        </div>
+                        <div className='view-code'>
+                          <a
+                            href='https://github.com/ksentak/omegawo-app'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faCode}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Code
+                            </button>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -485,7 +572,7 @@ class Projects extends Component {
           role='dialog'
           aria-hidden='true'
         >
-          <div className='modal-dialog modal-xl' role='document'>
+          <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
               <button
                 type='button'
@@ -502,38 +589,54 @@ class Projects extends Component {
                   <div className='row justify-content-center'>
                     <div className='col-lg-8'>
                       {/* Portfolio Modal - Title */}
-                      <h2 className='portfolio-modal-title text-secondary text-uppercase mb-0'>
-                        React-Colors
+                      <h2 className='portfolio-modal-title text-uppercase mb-3'>
+                        Matt Walks Dogs
                       </h2>
-                      {/* Icon Divider */}
-                      <div className='divider-custom'>
-                        <div className='divider-custom-line'></div>
-                        <div className='divider-custom-icon'>
-                          <i className='fas fa-star'></i>
-                        </div>
-                        <div className='divider-custom-line'></div>
-                      </div>
                       {/* Portfolio Modal - Image */}
                       <img
-                        className='img-fluid rounded mb-5'
-                        src={ReactColors}
-                        alt='React Colors'
+                        className='img-fluid modal-img mb-3'
+                        src={MattWalksDogs}
+                        alt='Matt Walks Dogs'
                       />
                       {/* Portfolio Modal - Text */}
-                      <p>A custom color palette site built with react.</p>
-                      <p className='mb-4'>
-                        <a
-                          href='https://ksentak.github.io/matt-walks-dogs/'
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          View Site
-                        </a>
+                      <p>
+                        A single page website for a dog walking business that.
+                        The site is mobile-friendly and has a functional php
+                        contact form.
                       </p>
-                      <button className='btn btn-primary' data-dismiss='modal'>
-                        <i className='fas fa-times fa-fw'></i>
-                        Close Window
-                      </button>
+                      {/* Modal Links */}
+                      <div className='modal-links text-center'>
+                        <div className='view-site'>
+                          <a
+                            href='https://ksentak.github.io/matt-walks-dogs/'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faExternalLinkAlt}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Site
+                            </button>
+                          </a>
+                        </div>
+                        <div className='view-code'>
+                          <a
+                            href='https://github.com/ksentak/matt-walks-dogs'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <button className='modal-btn modal-site-btn'>
+                              <FontAwesomeIcon
+                                icon={faCode}
+                                className='modal-icon'
+                              ></FontAwesomeIcon>
+                              View Code
+                            </button>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
