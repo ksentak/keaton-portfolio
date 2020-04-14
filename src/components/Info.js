@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-
+import PDF from '../assets/files/KeatonSentakResume.pdf';
 import '../assets/css/Info.css';
 
 import Headshot from '../assets/images/profile-headshot.jpg';
@@ -13,22 +12,21 @@ class Info extends Component {
           {/* Row 1 */}
           <div className='row'>
             <div className='col-12'>
-              <h1>
+              <h1 className='section-title'>
                 <span className='main-color'>About</span> Me
               </h1>
-              <div className='section-underline'></div>
             </div>
           </div>
           {/* Row 2 */}
-          <div className='row'>
-            <div className='col-6'>
+          <div className='row text-md-left text-center'>
+            <div className='col-md-6 mb-3'>
               <img
                 src={Headshot}
                 class='img-fluid profile-picture'
                 alt='Profile'
               />
             </div>
-            <div className='col-6 about-section'>
+            <div className='col-md-6 about-section'>
               <p className='about-text'>
                 A Full-Stack Developer and graduate of both Rutgers University
                 and the University of Pennsylvania LPS Coding Bootcamp looking
@@ -40,9 +38,9 @@ class Info extends Component {
                 collaboratively in a team setting to ensure optimal results for
                 user and technology centered designs.
               </p>
-              <Link to='assets/files/KeatonSentakResume.pdf' target='_blank'>
-                <button class='resume-btn'>Download Resume</button>
-              </Link>
+              <a href={PDF} target='_blank' rel='noopener noreferrer'>
+                <button class='resume-btn mt-2 mb-3'>Download Resume</button>
+              </a>
             </div>
           </div>
         </div>

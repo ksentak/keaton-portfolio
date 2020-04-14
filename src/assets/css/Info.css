@@ -1,6 +1,11 @@
 .profile-picture {
-  height: 325px;
-  width: 400px;
+  height: 350px;
+  width: 415px;
+  border-radius: 6px;
+}
+
+.about-text {
+  line-height: 28px;
 }
 
 .resume-btn {

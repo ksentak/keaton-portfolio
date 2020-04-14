@@ -36,10 +36,9 @@ class ContactForm extends Component {
           {/* Row 1 */}
           <div className='row'>
             <div className='col-12'>
-              <h1>
+              <h1 className='section-title'>
                 <span className='main-color'>Contact</span> Me
               </h1>
-              <div className='section-underline'></div>
             </div>
           </div>
           {/* Row 2 */}

@@ -17,10 +17,7 @@ class Projects extends Component {
           {/* Row 1 */}
           <div className='row'>
             <div className='col-12'>
-              <h1>
-                <span className='main-color'>Portfolio</span>
-              </h1>
-              <div className='section-underline'></div>
+              <h1 className='section-title'>Portfolio</h1>
             </div>
           </div>
           {/* Row 2 */}
