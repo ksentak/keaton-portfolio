@@ -1,4 +1,39 @@
-.portfolio .portfolio-item {
+.portfolio-item {
+  margin-bottom: 15px;
+  display: block;
+  position: relative;
+}
+
+.portfolio-item-caption {
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: rgba(255, 74, 87, 0.8);
+  border-radius: 6px;
+}
+
+.portfolio-item-caption:hover {
+  opacity: 1;
+}
+
+.portfolio-img {
+  height: 200px;
+  width: 350px;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-img {
+    height: 200px;
+    width: 350px;
+  }
+  .portfolio-item-caption:hover {
+    opacity: 0;
+  }
+}
+
+/* .portfolio .portfolio-item {
   cursor: pointer;
   position: relative;
   display: block;
@@ -43,4 +78,4 @@
   line-height: 3rem;
   color: #1abc9c;
   opacity: 1;
-}
+} */

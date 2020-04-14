@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-
 // CSS
 import '../assets/css/ContactForm.css';
 

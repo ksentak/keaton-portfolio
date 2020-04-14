@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+// Font Awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 // CSS
 import '../assets/css/Projects.css';
 // Images
@@ -23,7 +27,7 @@ class Projects extends Component {
           {/* Row 2 */}
           <div className='row text-center'>
             {/* Project 1 */}
-            <div className='col-md-6 col-lg-4'>
+            <div className='col-lg-4 col-md-6'>
               <div
                 className='portfolio-item mx-auto'
                 data-toggle='modal'
@@ -31,15 +35,20 @@ class Projects extends Component {
               >
                 <div className='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>
                   <div className='portfolio-item-caption-content text-center text-white'>
-                    <i className='fas fa-plus fa-3x'></i>
+                    <FontAwesomeIcon icon={faPlus} size='3x'></FontAwesomeIcon>
                   </div>
                 </div>
-                <img className='img-fluid' src={ReactColors} alt='#' />
+                <img
+                  className='img-fluid portfolio-img'
+                  src={ReactColors}
+                  alt='React-Colors'
+                />
+                <p className='project-title'>React Colors</p>
               </div>
             </div>
 
             {/* Project 2 */}
-            <div className='col-md-6 col-lg-4'>
+            <div className='col-lg-4 col-md-6'>
               <div
                 className='portfolio-item mx-auto'
                 data-toggle='modal'
@@ -47,15 +56,20 @@ class Projects extends Component {
               >
                 <div className='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>
                   <div className='portfolio-item-caption-content text-center text-white'>
-                    <i className='fas fa-plus fa-3x'></i>
+                    <FontAwesomeIcon icon={faPlus} size='3x'></FontAwesomeIcon>
                   </div>
                 </div>
-                <img className='img-fluid' src={ReactAuth} alt='#' />
+                <img
+                  className='img-fluid portfolio-img'
+                  src={ReactAuth}
+                  alt='React-Auth'
+                />
+                <p className='project-title'>React User Authentication</p>
               </div>
             </div>
 
             {/* Project 3 */}
-            <div className='col-md-6 col-lg-4'>
+            <div className='col-lg-4 col-md-6'>
               <div
                 className='portfolio-item mx-auto'
                 data-toggle='modal'
@@ -63,17 +77,19 @@ class Projects extends Component {
               >
                 <div className='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>
                   <div className='portfolio-item-caption-content text-center text-white'>
-                    <i className='fas fa-plus fa-3x'></i>
+                    <FontAwesomeIcon icon={faPlus} size='3x'></FontAwesomeIcon>
                   </div>
                 </div>
-                <img className='img-fluid' src={LibertyBeans} alt='#' />
+                <img
+                  className='img-fluid portfolio-img'
+                  src={LibertyBeans}
+                  alt='Liberty Beans Coffee'
+                />
+                <p className='project-title'>Liberty Beans Coffee</p>
               </div>
             </div>
-          </div>
-          {/* Row 3 */}
-          <div className='row text-center'>
             {/* Project 4 */}
-            <div className='col-md-6 col-lg-4'>
+            <div className='col-lg-4 col-md-6'>
               <div
                 className='portfolio-item mx-auto'
                 data-toggle='modal'
@@ -81,14 +97,19 @@ class Projects extends Component {
               >
                 <div className='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>
                   <div className='portfolio-item-caption-content text-center text-white'>
-                    <i className='fas fa-plus fa-3x'></i>
+                    <FontAwesomeIcon icon={faPlus} size='3x'></FontAwesomeIcon>
                   </div>
                 </div>
-                <img className='img-fluid' src={GoogleBooks} alt='#' />
+                <img
+                  className='img-fluid portfolio-img'
+                  src={GoogleBooks}
+                  alt='Google Books App'
+                />
+                <p className='project-title'>Google Books</p>
               </div>
             </div>
             {/* Project 5 */}
-            <div className='col-md-6 col-lg-4'>
+            <div className='col-lg-4 col-md-6'>
               <div
                 className='portfolio-item mx-auto'
                 data-toggle='modal'
@@ -96,14 +117,19 @@ class Projects extends Component {
               >
                 <div className='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>
                   <div className='portfolio-item-caption-content text-center text-white'>
-                    <i className='fas fa-plus fa-3x'></i>
+                    <FontAwesomeIcon icon={faPlus} size='3x'></FontAwesomeIcon>
                   </div>
                 </div>
-                <img className='img-fluid' src={Omega} alt='#' />
+                <img
+                  className='img-fluid portfolio-img'
+                  src={Omega}
+                  alt='Omega'
+                />
+                <p className='project-title'>Omega</p>
               </div>
             </div>
             {/* Project 6 */}
-            <div className='col-md-6 col-lg-4'>
+            <div className='col-lg-4 col-md-6'>
               <div
                 className='portfolio-item mx-auto'
                 data-toggle='modal'
@@ -111,10 +137,15 @@ class Projects extends Component {
               >
                 <div className='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>
                   <div className='portfolio-item-caption-content text-center text-white'>
-                    <i className='fas fa-plus fa-3x'></i>
+                    <FontAwesomeIcon icon={faPlus} size='3x'></FontAwesomeIcon>
                   </div>
                 </div>
-                <img className='img-fluid' src={MattWalksDogs} alt='#' />
+                <img
+                  className='img-fluid portfolio-img'
+                  src={MattWalksDogs}
+                  alt='Matt Walks Dogs'
+                />
+                <p className='project-title'>Matt Walks Dogs</p>
               </div>
             </div>
           </div>
@@ -125,7 +156,7 @@ class Projects extends Component {
         <div
           className='portfolio-modal modal fade'
           id='portfolioModal1'
-          tabindex='-1'
+          tabIndex='-1'
           role='dialog'
           aria-hidden='true'
         >
@@ -138,7 +169,7 @@ class Projects extends Component {
                 aria-label='Close'
               >
                 <span aria-hidden='true'>
-                  <i className='fas fa-times'></i>
+                  <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
               </button>
               <div className='modal-body text-center'>
@@ -190,7 +221,7 @@ class Projects extends Component {
         <div
           className='portfolio-modal modal fade'
           id='portfolioModal2'
-          tabindex='-1'
+          tabIndex='-1'
           role='dialog'
           aria-hidden='true'
         >
@@ -203,7 +234,7 @@ class Projects extends Component {
                 aria-label='Close'
               >
                 <span aria-hidden='true'>
-                  <i className='fas fa-times'></i>
+                  <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
               </button>
               <div className='modal-body text-center'>
@@ -255,7 +286,7 @@ class Projects extends Component {
         <div
           className='portfolio-modal modal fade'
           id='portfolioModal3'
-          tabindex='-1'
+          tabIndex='-1'
           role='dialog'
           aria-hidden='true'
         >
@@ -268,7 +299,7 @@ class Projects extends Component {
                 aria-label='Close'
               >
                 <span aria-hidden='true'>
-                  <i className='fas fa-times'></i>
+                  <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
               </button>
               <div className='modal-body text-center'>
@@ -320,7 +351,7 @@ class Projects extends Component {
         <div
           className='portfolio-modal modal fade'
           id='portfolioModal4'
-          tabindex='-1'
+          tabIndex='-1'
           role='dialog'
           aria-hidden='true'
         >
@@ -333,7 +364,7 @@ class Projects extends Component {
                 aria-label='Close'
               >
                 <span aria-hidden='true'>
-                  <i className='fas fa-times'></i>
+                  <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
               </button>
               <div className='modal-body text-center'>
@@ -385,7 +416,7 @@ class Projects extends Component {
         <div
           className='portfolio-modal modal fade'
           id='portfolioModal5'
-          tabindex='-1'
+          tabIndex='-1'
           role='dialog'
           aria-hidden='true'
         >
@@ -398,7 +429,7 @@ class Projects extends Component {
                 aria-label='Close'
               >
                 <span aria-hidden='true'>
-                  <i className='fas fa-times'></i>
+                  <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
               </button>
               <div className='modal-body text-center'>
@@ -450,7 +481,7 @@ class Projects extends Component {
         <div
           className='portfolio-modal modal fade'
           id='portfolioModal6'
-          tabindex='-1'
+          tabIndex='-1'
           role='dialog'
           aria-hidden='true'
         >
@@ -463,7 +494,7 @@ class Projects extends Component {
                 aria-label='Close'
               >
                 <span aria-hidden='true'>
-                  <i className='fas fa-times'></i>
+                  <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
               </button>
               <div className='modal-body text-center'>
