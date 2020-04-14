@@ -41,26 +41,44 @@ class ContactForm extends Component {
             </div>
           </div>
           {/* Row 2 */}
-          <div className='row justify-content-center'>
-            <div className='col-3 contact-info'>
-              <div className='contact-phone'>
-                <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
-                <span>Give me a call:</span>
-                <p>(609) 439-3423</p>
+          <div className='row'>
+            <div className='col-lg-4'>
+              <div className='contact-info'>
+                <div className='phone-info'>
+                  <FontAwesomeIcon
+                    icon={faPhone}
+                    className='contact-icon'
+                    fixedWidth
+                  ></FontAwesomeIcon>
+                  <span>Give me a call:</span>
+                  <p>(609) 439-3423</p>
+                </div>
               </div>
             </div>
-            <div className='col-3 contact-info'>
-              <div className='contact-email'>
-                <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-                <span>Send me an email:</span>
-                <p>keatonsentak@gmail.com</p>
+            <div className='col-lg-4'>
+              <div className='contact-info'>
+                <div className='email-info'>
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    className='contact-icon'
+                    fixedWidth
+                  ></FontAwesomeIcon>
+                  <span>Send me an email:</span>
+                  <p>keatonsentak@gmail.com</p>
+                </div>
               </div>
             </div>
-            <div className='col-3 contact-info'>
-              <div className='contact-address'>
-                <FontAwesomeIcon icon={faMapMarkerAlt}></FontAwesomeIcon>
-                <span>Currently located:</span>
-                <p>Greater Philadelphia Area</p>
+            <div className='col-lg-4'>
+              <div className='contact-info'>
+                <div className='location-info'>
+                  <FontAwesomeIcon
+                    icon={faMapMarkerAlt}
+                    className='contact-icon'
+                    fixedWidth
+                  ></FontAwesomeIcon>
+                  <span>Currently located:</span>
+                  <p>Greater Philadelphia</p>
+                </div>
               </div>
             </div>
           </div>
