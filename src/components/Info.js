@@ -22,7 +22,7 @@ class Info extends Component {
             <div className='col-md-6 mb-3'>
               <img
                 src={Headshot}
-                class='img-fluid profile-picture'
+                className='img-fluid profile-picture'
                 alt='Profile'
               />
             </div>
@@ -39,7 +39,9 @@ class Info extends Component {
                 user and technology centered designs.
               </p>
               <a href={PDF} target='_blank' rel='noopener noreferrer'>
-                <button class='resume-btn mt-2 mb-3'>Download Resume</button>
+                <button className='resume-btn mt-2 mb-3'>
+                  Download Resume
+                </button>
               </a>
             </div>
           </div>
