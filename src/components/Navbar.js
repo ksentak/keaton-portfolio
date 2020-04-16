@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../assets/css/Navbar.css';
 
 class Navbar extends Component {
   render() {
     return (
       <div className='Navbar'>
-        <nav className='navbar navbar-expand-lg'>
+        <nav className='navbar navbar-expand-sm'>
           <div className='container'>
-            <Link to='/' className='custom-logo-link' rel='home'>
-              {/* INSERT CUSTOM LOGO IF I WANT OTHERWISE LEAVE BLANK */}
-            </Link>
             <button
-              className='navbar-toggler'
+              className='navbar-toggler ml-auto'
               type='button'
               data-toggle='collapse'
               data-target='#navbarSupportedContent'
