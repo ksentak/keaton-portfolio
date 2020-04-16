@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
-class Footer extends Copmonent {
+class Footer extends Component {
   render() {
     return (
       <div className='Footer'>
-        <h1>Footer</h1>
+        <div className='col-12 text-center copyright'>
+          <p>Copyright &copy; 2020 Keaton Sentak</p>
+        </div>
       </div>
     );
   }

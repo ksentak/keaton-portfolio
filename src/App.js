@@ -15,7 +15,6 @@ function App() {
   return (
     <Router>
       <Navbar />
-      {/* <div className='App'> */}
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/about' component={About} />
@@ -23,7 +22,6 @@ function App() {
         <Route exact path='/contact' component={Contact} />
         <Route component={Error} />
       </Switch>
-      {/* </div> */}
     </Router>
   );
 }
