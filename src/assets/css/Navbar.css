@@ -41,11 +41,6 @@ body.admin-bar .fixed-top {
   color: #ff4a57;
 }
 
-/* .menu-item:last-child a {
-  margin-right: 0;
-  padding-right: 0;
-} */
-
 .navbar-toggler {
   background: transparent !important;
   padding-left: 0 !important;

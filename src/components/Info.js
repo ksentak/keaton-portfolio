@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PDF from '../assets/files/KeatonSentakResume.pdf';
 import '../assets/css/Info.css';
-
 import Headshot from '../assets/images/profile-headshot.jpg';
 
 class Info extends Component {

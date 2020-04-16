@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
-
 // CSS
 import 'react-toastify/dist/ReactToastify.min.css';
 import '../assets/css/ContactForm.css';
@@ -54,29 +53,22 @@ class ContactFormTest extends Component {
           className: 'submit-message success',
         }),
       });
-      // const { name, email, subject, message } = this.state;
-      // console.log(`
-      //   --SUBMITTING--
-      //   Name: ${name}
-      //   Email: ${email}
-      //   Subject: ${subject}
-      //   Message: ${message}
-      // `);
 
+      const { name, email, subject, message } = this.state;
       // Send form email
-      // let templateParams = {
-      //   name: name,
-      //   email: email,
-      //   subject: subject,
-      //   message: message,
-      // };
-      // emailjs.send(
-      //   'flockmail',
-      //   'contact_form',
-      //   templateParams,
-      //   'user_VHzOwlXbbYVfag1ggIWUx'
-      // );
-      // this.resetForm();
+      let templateParams = {
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+      };
+      emailjs.send(
+        'flockmail',
+        'contact_form',
+        templateParams,
+        'user_VHzOwlXbbYVfag1ggIWUx'
+      );
+      this.resetForm();
     } else {
       // Handle form validation failure
       console.error('FORM INVALID - DISPLAY ERROR MESSAGE');
@@ -121,7 +113,6 @@ class ContactFormTest extends Component {
       default:
         break;
     }
-
     this.setState({ formErrors, [name]: value });
   };
 
@@ -150,9 +141,7 @@ class ContactFormTest extends Component {
                         noValidate
                       ></input>
                       {formErrors.name.length > 0 && (
-                        <span className='errorMessage m-0 p-0'>
-                          {formErrors.name}
-                        </span>
+                        <span className='errorMessage'>{formErrors.name}</span>
                       )}
                     </div>
                     <div className='col-6'>
@@ -167,9 +156,7 @@ class ContactFormTest extends Component {
                         placeholder='Your email address'
                       ></input>
                       {formErrors.email.length > 0 && (
-                        <span className='errorMessage m-0 p-0'>
-                          {formErrors.email}
-                        </span>
+                        <span className='errorMessage'>{formErrors.email}</span>
                       )}
                     </div>
                   </div>

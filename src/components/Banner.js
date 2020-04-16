@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import Socials from './Socials';
-
 import '../assets/css/Banner.css';
 
 class Banner extends Component {
