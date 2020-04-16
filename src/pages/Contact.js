@@ -1,12 +1,12 @@
 import React from 'react';
 import ContactInfo from '../components/ContactInfo';
-import ContactFormTest from '../components/ContactFormTest';
+import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
   return (
     <div className='Contact'>
       <ContactInfo />
-      <ContactFormTest />
+      <ContactForm />
     </div>
   );
 };
