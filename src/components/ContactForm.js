@@ -33,7 +33,7 @@ class ContactFormTest extends Component {
       email: '',
       subject: '',
       message: '',
-      toastify: '',
+      // toastify: '',
       formErrors: {
         name: '',
         email: '',
@@ -43,18 +43,37 @@ class ContactFormTest extends Component {
     };
   }
 
+  toastifySuccess() {
+    toast('Form sent!', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      className: 'submit-feedback success',
+    });
+  }
+
+  toastifyFail() {
+    toast('Form failed to send!', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      className: 'submit-feedback fail',
+    });
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
 
     if (formValid(this.state)) {
       // Handle form validation success
-      this.setState({
-        toastify: toast('Message sent!', {
-          className: 'submit-message success',
-        }),
-      });
-
       const { name, email, subject, message } = this.state;
+
       // Send form email
       let templateParams = {
         name: name,
@@ -68,15 +87,21 @@ class ContactFormTest extends Component {
         templateParams,
         'user_VHzOwlXbbYVfag1ggIWUx'
       );
+
+      console.log(`
+        --SUBMITTING--
+        Name: ${name}
+        Email: ${email}
+        Subject: ${subject}
+        Message: ${message}
+      `);
+
       this.resetForm();
+      this.toastifySuccess();
     } else {
       // Handle form validation failure
       console.error('FORM INVALID - DISPLAY ERROR MESSAGE');
-      this.setState({
-        toastify: toast('Message was not delivered!', {
-          className: 'submit-message fail',
-        }),
-      });
+      this.toastifyFail();
     }
   };
 
@@ -200,26 +225,12 @@ class ContactFormTest extends Component {
                       )}
                     </div>
                   </div>
-                  <button
-                    className='submit-btn'
-                    type='submit'
-                    onClick={this.notify}
-                  >
+                  <button className='submit-btn' type='submit'>
                     Submit
                   </button>
                 </form>
-                <ToastContainer
-                  position='bottom-right'
-                  autoClose={5000}
-                  hideProgressBar
-                  newestOnTop={false}
-                  closeOnClick
-                  rtl={false}
-                  pauseOnVisibilityChange
-                  draggable
-                  pauseOnHover
-                />
               </div>
+              <ToastContainer />
             </div>
           </div>
         </div>
