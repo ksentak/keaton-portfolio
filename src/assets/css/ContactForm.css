@@ -72,3 +72,10 @@ form {
 .fail {
   background-color: #dc3545;
 }
+
+@media (max-width: 768px) {
+  .submit-message {
+    width: 125px;
+    margin-left: 200px;
+  }
+}
