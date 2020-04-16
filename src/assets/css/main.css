@@ -70,22 +70,5 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em;
-}
-
-.dropdown-menu {
-  border-radius: 6px;
-  background: #23263a;
-}
-
-.dropdown-item {
-  padding: 10px 15px;
-}
-
-.dropdown-item:focus,
-.dropdown-item:hover,
-.dropdown-item,
-.dropdown-item.active,
-.dropdown-item:active {
-  color: #fff;
+  margin-left: 15px;
 }
