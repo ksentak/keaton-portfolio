@@ -3,6 +3,12 @@
   height: 70vh;
 }
 
+.particles {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
 .jumbotron {
   background: none;
   color: white;

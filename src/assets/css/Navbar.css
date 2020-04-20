@@ -43,3 +43,9 @@ body.admin-bar .fixed-top {
   text-align: right;
   margin-right: 30px;
 }
+
+@media (max-width: 768px) {
+  .navbar-nav li {
+    padding-bottom: 7px;
+  }
+}
