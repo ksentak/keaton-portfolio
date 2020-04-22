@@ -85,7 +85,8 @@ class ContactFormTest extends Component {
         'flockmail',
         'contact_form',
         templateParams,
-        'user_VHzOwlXbbYVfag1ggIWUx'
+        // Enter userID
+        'user_xxxxxxx'
       );
 
       console.log(`

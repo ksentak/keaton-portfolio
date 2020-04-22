@@ -602,9 +602,9 @@ class Projects extends Component {
                       />
                       {/* Portfolio Modal - Text */}
                       <p>
-                        A single page website for a dog walking business that.
-                        The site is mobile-friendly and has a functional php
-                        contact form.
+                        A single page website for a dog walking business. The
+                        site is mobile-friendly and has a functional php contact
+                        form.
                       </p>
                       {/* Modal Links */}
                       <div className='modal-links text-center'>
