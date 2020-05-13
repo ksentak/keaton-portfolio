@@ -85,23 +85,22 @@ class ContactFormTest extends Component {
         'flockmail',
         'contact_form',
         templateParams,
-        // Enter userID
+        // Enter User ID
         'user_xxxxxxx'
       );
 
-      console.log(`
-        --SUBMITTING--
-        Name: ${name}
-        Email: ${email}
-        Subject: ${subject}
-        Message: ${message}
-      `);
-
+      //   console.log(`
+      //   --SUBMITTING--
+      //   Name: ${name}
+      //   Email: ${email}
+      //   Subject: ${subject}
+      //   Message: ${message}
+      // `);
       this.resetForm();
       this.toastifySuccess();
     } else {
       // Handle form validation failure
-      console.error('FORM INVALID - DISPLAY ERROR MESSAGE');
+      // console.error('FORM INVALID - DISPLAY ERROR MESSAGE');
       this.toastifyFail();
     }
   };
