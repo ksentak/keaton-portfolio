@@ -19,41 +19,23 @@ class Navbar extends Component {
             >
               <span className='navbar-toggler-icon' />
             </button>
-            <div
-              className='collapse navbar-collapse'
-              id='navbarSupportedContent'
-            >
+            <div className='collapse navbar-collapse' id='navbarSupportedContent'>
               <ul id='menu-primary' className='navbar-nav ml-auto'>
                 {/* Home */}
                 <li>
-                  <NavLink
-                    exact
-                    to='/'
-                    activeClassName='active'
-                    className='nav-Link'
-                  >
+                  <NavLink exact to='/' activeClassName='active' className='nav-Link'>
                     Home
                   </NavLink>
                 </li>
                 {/* About */}
                 <li>
-                  <NavLink
-                    exact
-                    to='/about'
-                    activeClassName='active'
-                    className='nav-Link'
-                  >
+                  <NavLink exact to='/about' activeClassName='active' className='nav-Link'>
                     About
                   </NavLink>
                 </li>
                 {/* Portfolio */}
                 <li>
-                  <NavLink
-                    exact
-                    to='/portfolio'
-                    activeClassName='active'
-                    className='nav-Link'
-                  >
+                  <NavLink exact to='/portfolio' activeClassName='active' className='nav-Link'>
                     Portfolio
                   </NavLink>
                 </li>
@@ -70,12 +52,7 @@ class Navbar extends Component {
                 </li> */}
                 {/* Contact */}
                 <li>
-                  <NavLink
-                    exact
-                    to='/contact'
-                    activeClassName='active'
-                    className='nav-Link'
-                  >
+                  <NavLink exact to='/contact' activeClassName='active' className='nav-Link'>
                     Contact
                   </NavLink>
                 </li>

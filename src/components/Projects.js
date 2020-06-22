@@ -24,7 +24,7 @@ class Projects extends Component {
           <div className='row'>
             <div className='col-12'>
               <h1 className='section-title'>
-                <span className='main-color'>Portfolio</span>
+                <span className='main-color'>Portfolio</span> Projects
               </h1>
             </div>
           </div>
@@ -42,11 +42,7 @@ class Projects extends Component {
                     <FontAwesomeIcon icon={faPlus} size='3x'></FontAwesomeIcon>
                   </div>
                 </div>
-                <img
-                  className='img-fluid portfolio-img'
-                  src={ReactColors}
-                  alt='React-Colors'
-                />
+                <img className='img-fluid portfolio-img' src={ReactColors} alt='React-Colors' />
                 <p className='project-title'>React Colors</p>
               </div>
             </div>
@@ -63,11 +59,7 @@ class Projects extends Component {
                     <FontAwesomeIcon icon={faPlus} size='3x'></FontAwesomeIcon>
                   </div>
                 </div>
-                <img
-                  className='img-fluid portfolio-img'
-                  src={ReactAuth}
-                  alt='React-Auth'
-                />
+                <img className='img-fluid portfolio-img' src={ReactAuth} alt='React-Auth' />
                 <p className='project-title'>React User Authentication</p>
               </div>
             </div>
@@ -104,11 +96,7 @@ class Projects extends Component {
                     <FontAwesomeIcon icon={faPlus} size='3x'></FontAwesomeIcon>
                   </div>
                 </div>
-                <img
-                  className='img-fluid portfolio-img'
-                  src={GoogleBooks}
-                  alt='Google Books App'
-                />
+                <img className='img-fluid portfolio-img' src={GoogleBooks} alt='Google Books App' />
                 <p className='project-title'>Google Books</p>
               </div>
             </div>
@@ -124,11 +112,7 @@ class Projects extends Component {
                     <FontAwesomeIcon icon={faPlus} size='3x'></FontAwesomeIcon>
                   </div>
                 </div>
-                <img
-                  className='img-fluid portfolio-img'
-                  src={Omega}
-                  alt='Omega'
-                />
+                <img className='img-fluid portfolio-img' src={Omega} alt='Omega' />
                 <p className='project-title'>Omega</p>
               </div>
             </div>
@@ -166,12 +150,7 @@ class Projects extends Component {
         >
           <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
-              <button
-                type='button'
-                className='close'
-                data-dismiss='modal'
-                aria-label='Close'
-              >
+              <button type='button' className='close' data-dismiss='modal' aria-label='Close'>
                 <span aria-hidden='true'>
                   <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
@@ -181,9 +160,7 @@ class Projects extends Component {
                   <div className='row justify-content-center'>
                     <div className='col-lg-8'>
                       {/* Portfolio Modal - Title */}
-                      <h2 className='portfolio-modal-title text-uppercase mb-3'>
-                        React-Colors
-                      </h2>
+                      <h2 className='portfolio-modal-title text-uppercase mb-3'>React-Colors</h2>
                       {/* Portfolio Modal - Image */}
                       <img
                         className='img-fluid modal-img mb-3'
@@ -192,10 +169,9 @@ class Projects extends Component {
                       />
                       {/* Portfolio Modal - Text */}
                       <p>
-                        A react application that allows users to view, create,
-                        and delete different color palettes. The user can copy
-                        any individual color's HEX, RGB, or RGBA code to their
-                        clipboard, as well as adjust the shade of each palette.
+                        A react application that allows users to view, create, and delete different
+                        color palettes. The user can copy any individual color's HEX, RGB, or RGBA
+                        code to their clipboard, as well as adjust the shade of each palette.
                       </p>
                       {/* Modal Links */}
                       <div className='modal-links text-center'>
@@ -247,12 +223,7 @@ class Projects extends Component {
         >
           <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
-              <button
-                type='button'
-                className='close'
-                data-dismiss='modal'
-                aria-label='Close'
-              >
+              <button type='button' className='close' data-dismiss='modal' aria-label='Close'>
                 <span aria-hidden='true'>
                   <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
@@ -266,17 +237,12 @@ class Projects extends Component {
                         React User Authentication
                       </h2>
                       {/* Portfolio Modal - Image */}
-                      <img
-                        className='img-fluid modal-img mb-3'
-                        src={ReactAuth}
-                        alt='React Auth'
-                      />
+                      <img className='img-fluid modal-img mb-3' src={ReactAuth} alt='React Auth' />
                       {/* Portfolio Modal - Text */}
                       <p>
-                        A user authentication application I built using React,
-                        Passport, and JWT that serves as a template for others
-                        and allows a user to sign up/log in. Input validation is
-                        included in and deployment to Heroku is made easy.
+                        A user authentication application I built using React, Passport, and JWT
+                        that serves as a template for others and allows a user to sign up/log in.
+                        Input validation is included in and deployment to Heroku is made easy.
                       </p>
                       {/* Modal Links */}
                       <div className='modal-links text-center'>
@@ -329,12 +295,7 @@ class Projects extends Component {
         >
           <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
-              <button
-                type='button'
-                className='close'
-                data-dismiss='modal'
-                aria-label='Close'
-              >
+              <button type='button' className='close' data-dismiss='modal' aria-label='Close'>
                 <span aria-hidden='true'>
                   <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
@@ -355,12 +316,10 @@ class Projects extends Component {
                       />
                       {/* Portfolio Modal - Text */}
                       <p>
-                        A small business coffee shop website that I built to
-                        display my skills in front-end web development. This
-                        website was created with a mobile-first design and a
-                        simple user interface, in order to provide a better user
-                        experience. Additionally, I developed a React version of
-                        this site.
+                        A small business coffee shop website that I built to display my skills in
+                        front-end web development. This website was created with a mobile-first
+                        design and a simple user interface, in order to provide a better user
+                        experience. Additionally, I developed a React version of this site.
                       </p>
                       {/* Modal Links */}
                       <div className='modal-links text-center'>
@@ -413,12 +372,7 @@ class Projects extends Component {
         >
           <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
-              <button
-                type='button'
-                className='close'
-                data-dismiss='modal'
-                aria-label='Close'
-              >
+              <button type='button' className='close' data-dismiss='modal' aria-label='Close'>
                 <span aria-hidden='true'>
                   <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
@@ -428,9 +382,7 @@ class Projects extends Component {
                   <div className='row justify-content-center'>
                     <div className='col-lg-8'>
                       {/* Portfolio Modal - Title */}
-                      <h2 className='portfolio-modal-title text-uppercase mb-3'>
-                        Google Books
-                      </h2>
+                      <h2 className='portfolio-modal-title text-uppercase mb-3'>Google Books</h2>
                       {/* Portfolio Modal - Image */}
                       <img
                         className='img-fluid modal-img mb-3'
@@ -439,11 +391,10 @@ class Projects extends Component {
                       />
                       {/* Portfolio Modal - Text */}
                       <p>
-                        A MERN application in which a user can search for
-                        different books using the Google Books API. Once the
-                        user searches for a specific book, results are rendered
-                        and the user can either favorite a book or view more
-                        info about the book.
+                        A MERN application in which a user can search for different books using the
+                        Google Books API. Once the user searches for a specific book, results are
+                        rendered and the user can either favorite a book or view more info about the
+                        book.
                       </p>
                       {/* Modal Links */}
                       <div className='modal-links text-center'>
@@ -496,12 +447,7 @@ class Projects extends Component {
         >
           <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
-              <button
-                type='button'
-                className='close'
-                data-dismiss='modal'
-                aria-label='Close'
-              >
+              <button type='button' className='close' data-dismiss='modal' aria-label='Close'>
                 <span aria-hidden='true'>
                   <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
@@ -511,19 +457,13 @@ class Projects extends Component {
                   <div className='row justify-content-center'>
                     <div className='col-lg-8'>
                       {/* Portfolio Modal - Title */}
-                      <h2 className='portfolio-modal-title text-uppercase mb-3'>
-                        Omega
-                      </h2>
+                      <h2 className='portfolio-modal-title text-uppercase mb-3'>Omega</h2>
                       {/* Portfolio Modal - Image */}
-                      <img
-                        className='img-fluid modal-img mb-3'
-                        src={Omega}
-                        alt='Omega'
-                      />
+                      <img className='img-fluid modal-img mb-3' src={Omega} alt='Omega' />
                       {/* Portfolio Modal - Text */}
                       <p>
-                        A full-stack MERN application which allows users to
-                        create, plan, and keep track of their weekly workouts.
+                        A full-stack MERN application which allows users to create, plan, and keep
+                        track of their weekly workouts.
                       </p>
                       {/* Modal Links */}
                       <div className='modal-links text-center'>
@@ -576,12 +516,7 @@ class Projects extends Component {
         >
           <div className='modal-dialog modal-lg' role='document'>
             <div className='modal-content'>
-              <button
-                type='button'
-                className='close'
-                data-dismiss='modal'
-                aria-label='Close'
-              >
+              <button type='button' className='close' data-dismiss='modal' aria-label='Close'>
                 <span aria-hidden='true'>
                   <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                 </span>
@@ -591,9 +526,7 @@ class Projects extends Component {
                   <div className='row justify-content-center'>
                     <div className='col-lg-8'>
                       {/* Portfolio Modal - Title */}
-                      <h2 className='portfolio-modal-title text-uppercase mb-3'>
-                        Matt Walks Dogs
-                      </h2>
+                      <h2 className='portfolio-modal-title text-uppercase mb-3'>Matt Walks Dogs</h2>
                       {/* Portfolio Modal - Image */}
                       <img
                         className='img-fluid modal-img mb-3'
@@ -602,9 +535,8 @@ class Projects extends Component {
                       />
                       {/* Portfolio Modal - Text */}
                       <p>
-                        A single page website for a dog walking business. The
-                        site is mobile-friendly and has a functional php contact
-                        form.
+                        A single page website for a dog walking business. The site is
+                        mobile-friendly and has a functional php contact form.
                       </p>
                       {/* Modal Links */}
                       <div className='modal-links text-center'>
