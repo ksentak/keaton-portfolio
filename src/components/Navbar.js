@@ -12,29 +12,29 @@ class Navbar extends Component {
               className='navbar-toggler ml-auto'
               type='button'
               data-toggle='collapse'
-              data-target='#navbarSupportedContent'
-              aria-controls='navbarSupportedContent'
+              data-target='#navbarMobile'
+              aria-controls='navbarMobile'
               aria-expanded='false'
               aria-label='Toggle navigation'
             >
               <span className='navbar-toggler-icon' />
             </button>
-            <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+            <div className='collapse navbar-collapse' id='navbarMobile'>
               <ul id='menu-primary' className='navbar-nav ml-auto'>
                 {/* Home */}
-                <li>
+                <li data-toggle='collapse' data-target='.navbar-collapse.show'>
                   <NavLink exact to='/' activeClassName='active' className='nav-Link'>
                     Home
                   </NavLink>
                 </li>
                 {/* About */}
-                <li>
+                <li data-toggle='collapse' data-target='.navbar-collapse.show'>
                   <NavLink exact to='/about' activeClassName='active' className='nav-Link'>
                     About
                   </NavLink>
                 </li>
                 {/* Portfolio */}
-                <li>
+                <li data-toggle='collapse' data-target='.navbar-collapse.show'>
                   <NavLink exact to='/portfolio' activeClassName='active' className='nav-Link'>
                     Portfolio
                   </NavLink>
@@ -51,7 +51,7 @@ class Navbar extends Component {
                   </NavLink>
                 </li> */}
                 {/* Contact */}
-                <li>
+                <li data-toggle='collapse' data-target='.navbar-collapse.show'>
                   <NavLink exact to='/contact' activeClassName='active' className='nav-Link'>
                     Contact
                   </NavLink>
