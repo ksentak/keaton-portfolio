@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faMedium } from '@fortawesome/free-brands-svg-icons';
 // CSS
 import '../assets/css/Socials.css';
 
@@ -26,11 +26,7 @@ class Socials extends Component {
             </li>
             {/* GitHub */}
             <li className='social-inline-item'>
-              <a
-                href='https://github.com/ksentak'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
+              <a href='https://github.com/ksentak' target='_blank' rel='noopener noreferrer'>
                 <FontAwesomeIcon icon={faGithub} fixedWidth />
               </a>
             </li>
@@ -46,12 +42,8 @@ class Socials extends Component {
             </li>
             {/* Email */}
             <li className='social-inline-item'>
-              <a
-                href='mailto:keatonsentak@gmail.com?subject=Website Inquiry'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <FontAwesomeIcon icon={faEnvelope} fixedWidth />
+              <a href='https://medium.com/@ksentak' target='_blank' rel='noopener noreferrer'>
+                <FontAwesomeIcon icon={faMedium} fixedWidth />
               </a>
             </li>
           </ul>
