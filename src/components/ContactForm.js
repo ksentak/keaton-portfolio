@@ -5,9 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import '../assets/css/ContactForm.css';
 
-const emailRegex = RegExp(
-  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-);
+const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 
 const formValid = ({ formErrors, ...rest }) => {
   let valid = true;
@@ -125,9 +123,7 @@ class ContactFormTest extends Component {
         formErrors.name = value.length < 1 ? 'Please enter your name.' : '';
         break;
       case 'email':
-        formErrors.email = emailRegex.test(value)
-          ? ''
-          : 'Please enter a valid email address.';
+        formErrors.email = emailRegex.test(value) ? '' : 'Please enter a valid email address.';
         break;
       case 'subject':
         formErrors.subject = value.length < 1 ? 'Please enter a subject.' : '';
@@ -162,7 +158,7 @@ class ContactFormTest extends Component {
                           formErrors.name.length > 0 ? 'error' : null
                         }`}
                         onChange={this.handleChange}
-                        placeholder='Your name'
+                        placeholder='Name'
                         noValidate
                       ></input>
                       {formErrors.name.length > 0 && (
@@ -178,7 +174,7 @@ class ContactFormTest extends Component {
                           formErrors.email.length > 0 ? 'error' : null
                         }`}
                         onChange={this.handleChange}
-                        placeholder='Your email address'
+                        placeholder='Email address'
                       ></input>
                       {formErrors.email.length > 0 && (
                         <span className='errorMessage'>{formErrors.email}</span>
@@ -199,9 +195,7 @@ class ContactFormTest extends Component {
                         placeholder='Subject'
                       ></input>
                       {formErrors.subject.length > 0 && (
-                        <span className='errorMessage'>
-                          {formErrors.subject}
-                        </span>
+                        <span className='errorMessage'>{formErrors.subject}</span>
                       )}
                     </div>
                   </div>
@@ -216,12 +210,10 @@ class ContactFormTest extends Component {
                           formErrors.message.length > 0 ? 'error' : null
                         }`}
                         onChange={this.handleChange}
-                        placeholder='Your message'
+                        placeholder='Message'
                       ></textarea>
                       {formErrors.message.length > 0 && (
-                        <span className='errorMessage'>
-                          {formErrors.message}
-                        </span>
+                        <span className='errorMessage'>{formErrors.message}</span>
                       )}
                     </div>
                   </div>
