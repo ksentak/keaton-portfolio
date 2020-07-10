@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-// Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-// CSS
 import '../assets/css/Projects.css';
-// Images
 import ReactColors from '../assets/images/react-colors.png';
 import ReactAuth from '../assets/images/react-auth.png';
 import LibertyBeans from '../assets/images/liberty-beans.png';

@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-// Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import { faMedium } from '@fortawesome/free-brands-svg-icons';
-// CSS
 import '../assets/css/Socials.css';
 
 class Socials extends Component {
