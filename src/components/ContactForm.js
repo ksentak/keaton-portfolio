@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
-// CSS
 import 'react-toastify/dist/ReactToastify.min.css';
 import '../assets/css/ContactForm.css';
 
@@ -23,7 +22,7 @@ const formValid = ({ formErrors, ...rest }) => {
   return valid;
 };
 
-class ContactFormTest extends Component {
+class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,7 +30,6 @@ class ContactFormTest extends Component {
       email: '',
       subject: '',
       message: '',
-      // toastify: '',
       formErrors: {
         name: '',
         email: '',
@@ -65,45 +63,7 @@ class ContactFormTest extends Component {
     });
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (formValid(this.state)) {
-      // Handle form validation success
-      const { name, email, subject, message } = this.state;
-
-      // Send form email
-      let templateParams = {
-        name: name,
-        email: email,
-        subject: subject,
-        message: message,
-      };
-      emailjs.send(
-        'flockmail',
-        'contact_form',
-        templateParams,
-        // Enter User ID
-        'user_xxxxxxx'
-      );
-
-      //   console.log(`
-      //   --SUBMITTING--
-      //   Name: ${name}
-      //   Email: ${email}
-      //   Subject: ${subject}
-      //   Message: ${message}
-      // `);
-      this.resetForm();
-      this.toastifySuccess();
-    } else {
-      // Handle form validation failure
-      // console.error('FORM INVALID - DISPLAY ERROR MESSAGE');
-      this.toastifyFail();
-    }
-  };
-
-  // Function to reset form
+  // Reset form
   resetForm() {
     this.setState({
       name: '',
@@ -135,6 +95,29 @@ class ContactFormTest extends Component {
         break;
     }
     this.setState({ formErrors, [name]: value });
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (formValid(this.state)) {
+      // Handle form validation success
+      const { name, email, subject, message } = this.state;
+
+      // Send form email
+      let templateParams = {
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+      };
+      emailjs.send('flockmail', 'contact_form', templateParams, 'user_');
+      this.resetForm();
+      this.toastifySuccess();
+    } else {
+      // Handle form validation failure
+      this.toastifyFail();
+    }
   };
 
   render() {
@@ -231,4 +214,4 @@ class ContactFormTest extends Component {
   }
 }
 
-export default ContactFormTest;
+export default ContactForm;
