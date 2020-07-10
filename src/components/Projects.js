@@ -10,7 +10,7 @@ import ReactAuth from '../assets/images/react-auth.png';
 import LibertyBeans from '../assets/images/liberty-beans.png';
 import GoogleBooks from '../assets/images/GoogleBooks.png';
 import Omega from '../assets/images/omega.png';
-import MattWalksDogs from '../assets/images/matt-walks-dogs.png';
+import TimeMachine from '../assets/images/time_machine.png';
 
 class Projects extends Component {
   render() {
@@ -125,12 +125,8 @@ class Projects extends Component {
                     <FontAwesomeIcon icon={faPlus} size='3x'></FontAwesomeIcon>
                   </div>
                 </div>
-                <img
-                  className='img-fluid portfolio-img'
-                  src={MattWalksDogs}
-                  alt='Matt Walks Dogs'
-                />
-                <p className='project-title'>Matt Walks Dogs</p>
+                <img className='img-fluid portfolio-img' src={TimeMachine} alt='Time Machine' />
+                <p className='project-title'>Time Machine</p>
               </div>
             </div>
           </div>
@@ -523,23 +519,26 @@ class Projects extends Component {
                   <div className='row justify-content-center'>
                     <div className='col-lg-8'>
                       {/* Portfolio Modal - Title */}
-                      <h2 className='portfolio-modal-title text-uppercase mb-3'>Matt Walks Dogs</h2>
+                      <h2 className='portfolio-modal-title text-uppercase mb-3'>Time Machine</h2>
                       {/* Portfolio Modal - Image */}
                       <img
                         className='img-fluid modal-img mb-3'
-                        src={MattWalksDogs}
-                        alt='Matt Walks Dogs'
+                        src={TimeMachine}
+                        alt='Time Machine'
                       />
                       {/* Portfolio Modal - Text */}
                       <p>
-                        A single page website for a dog walking business. The site is
-                        mobile-friendly and has a functional php contact form.
+                        The Time Machine app provides users with an easy, fun way to learn about
+                        history. The user enters a year into the search box, and a historical
+                        snapshot from that time will be generated. The data returned by the app
+                        includes top movies, TV shows and news headlines from the search year, as
+                        well as a Gif related to the time period.
                       </p>
                       {/* Modal Links */}
                       <div className='modal-links text-center'>
                         <div className='view-site'>
                           <a
-                            href='https://ksentak.github.io/matt-walks-dogs/'
+                            href='https://ksentak.github.io/time-machine/'
                             target='_blank'
                             rel='noopener noreferrer'
                           >
@@ -554,7 +553,7 @@ class Projects extends Component {
                         </div>
                         <div className='view-code'>
                           <a
-                            href='https://github.com/ksentak/matt-walks-dogs'
+                            href='https://github.com/ksentak/time-machine'
                             target='_blank'
                             rel='noopener noreferrer'
                           >
