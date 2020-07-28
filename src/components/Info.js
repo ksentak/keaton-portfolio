@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import PDF from '../assets/files/KeatonSentakResume.pdf';
+import PDF from '../assets/files/Keaton_Sentak_Resume.pdf';
 import '../assets/css/Info.css';
-import Headshot from '../assets/images/profile-headshot.JPG';
+import Headshot from '../assets/images/profile-headshot.jpg';
 
 class Info extends Component {
   render() {

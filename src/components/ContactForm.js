@@ -111,7 +111,7 @@ class ContactForm extends Component {
         subject: subject,
         message: message,
       };
-      emailjs.send('flockmail', 'contact_form', templateParams, 'user_');
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'userID');
       this.resetForm();
       this.toastifySuccess();
     } else {

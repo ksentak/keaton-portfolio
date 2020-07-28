@@ -462,7 +462,7 @@ class Projects extends Component {
                       <div className='modal-links text-center'>
                         <div className='view-site'>
                           <a
-                            href='https://omega-wo.herokuapp.com/'
+                            href='https://omegaworkout01.herokuapp.com/'
                             target='_blank'
                             rel='noopener noreferrer'
                           >
