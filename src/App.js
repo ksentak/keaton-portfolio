@@ -9,21 +9,22 @@ import Error from './pages/Error';
 // Components
 import Navbar from './components/Navbar';
 // CSS
-import './assets/css/main.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/style.css';
 
-function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/about' component={About} />
-        <Route exact path='/portfolio' component={Portfolio} />
-        <Route exact path='/contact' component={Contact} />
-        <Route component={Error} />
-      </Switch>
-    </Router>
-  );
-}
+const App = () => {
+	return (
+		<Router>
+			<Navbar />
+			<Switch>
+				<Route exact path='/' component={Home} />
+				<Route exact path='/about' component={About} />
+				<Route exact path='/portfolio' component={Portfolio} />
+				<Route exact path='/contact' component={Contact} />
+				<Route component={Error} />
+			</Switch>
+		</Router>
+	);
+};
 
 export default App;
