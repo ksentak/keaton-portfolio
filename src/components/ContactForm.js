@@ -4,7 +4,6 @@ import _ from 'lodash/fp';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
-require('dotenv').config();
 
 const ContactForm = () => {
 	const { register, errors, handleSubmit, reset } = useForm();

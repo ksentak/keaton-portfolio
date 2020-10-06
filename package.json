@@ -1,6 +1,6 @@
 {
 	"name": "keaton-react-portfolio",
-	"version": "2.8.0",
+	"version": "2.9.0",
 	"homepage": "https://keatonsentak.com/",
 	"private": true,
 	"dependencies": {
@@ -12,7 +12,6 @@
 		"@testing-library/react": "^9.5.0",
 		"@testing-library/user-event": "^7.2.1",
 		"bootstrap": "^4.5.2",
-		"dotenv": "^8.2.0",
 		"emailjs-com": "^2.4.1",
 		"lodash": "^4.17.20",
 		"react": "^16.13.1",
