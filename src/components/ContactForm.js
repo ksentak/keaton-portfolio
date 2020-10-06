@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+require('dotenv').config();
 
 const emailRegex = RegExp(
 	/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -114,7 +115,12 @@ class ContactForm extends Component {
 				subject: subject,
 				message: message
 			};
-			emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'userID');
+			emailjs.send(
+				process.env.REACT_APP_SERVICE_ID,
+				process.env.REACT_APP_TEMPLATE_ID,
+				templateParams,
+				process.env.REACT_APP_USER_ID
+			);
 			this.resetForm();
 			this.toastifySuccess();
 		} else {
