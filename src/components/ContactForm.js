@@ -57,17 +57,16 @@ const ContactForm = () => {
 											name='name'
 											ref={register({
 												required: true,
-												pattern: /^[A-Za-z]+$/i
+												maxLength: 30
 											})}
 											className='form-control formInput'
 											placeholder='Name'
-											noValidate
 										></input>
 										{_.get('name.type', errors) === 'required' && (
 											<p>Please enter your name</p>
 										)}
-										{_.get('name.type', errors) === 'pattern' && (
-											<p>Please use alphabetical characters only</p>
+										{_.get('name.type', errors) === 'maxLength' && (
+											<p>Please use 30 characters or less</p>
 										)}
 									</div>
 									<div className='col-6'>
