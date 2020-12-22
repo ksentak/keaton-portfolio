@@ -15,7 +15,7 @@ interface Props {
 	projectDescription: string;
 }
 
-const ProjectItem:React.FC<Props> = ({
+const ProjectItem: React.FC<Props> = ({
 	title,
 	imgSrc,
 	imgAlt,

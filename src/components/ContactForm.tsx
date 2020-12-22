@@ -11,7 +11,7 @@ interface data {
 	message: string;
 }
 
-const ContactForm:React.FC = () => {
+const ContactForm: React.FC = () => {
 	const { register, errors, handleSubmit, reset } = useForm();
 
 	const toastifySuccess = () :void => {
@@ -35,10 +35,10 @@ const ContactForm:React.FC = () => {
 			message: data.message
 		};
 		emailjs.send(
-			process.env.REACT_APP_SERVICE_ID,
-			process.env.REACT_APP_TEMPLATE_ID,
+			process.env.REACT_APP_SERVICE_ID ?? '',
+			process.env.REACT_APP_TEMPLATE_ID ?? '',
 			templateParams,
-			process.env.REACT_APP_USER_ID
+			process.env.REACT_APP_USER_ID ?? ''
 		);
 		reset();
 		toastifySuccess();
@@ -131,7 +131,7 @@ const ContactForm:React.FC = () => {
 										)}
 									</div>
 								</div>
-								<button className='submit-btn' type='submit'>
+								<button className='red-btn' type='submit'>
 									Submit
 								</button>
 							</form>

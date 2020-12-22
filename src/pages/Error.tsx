@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Error:React.FC = () => {
+const Error: React.FC = () => {
 	return (
 		<div className='Error'>
 			<div className='jumbotron jumbotron-fluid error-jumbotron'>
@@ -9,7 +9,7 @@ const Error:React.FC = () => {
 				</h1>
 				<h6>Sorry but the page you are looking for is not available.</h6>
 				<Link to='/'>
-					<button className='error-btn'>Return home</button>
+					<button className='red-btn'>Return home</button>
 				</Link>
 			</div>
 		</div>
