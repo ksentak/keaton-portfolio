@@ -1,8 +1,7 @@
-import React from 'react';
 import PDF from '../assets/files/Keaton_Sentak_Resume.pdf';
 import Headshot from '../assets/images/profile-headshot.jpg';
 
-const Info = () => {
+const Info:React.FC = () => {
 	return (
 		<div className='Info'>
 			<div className='container'>

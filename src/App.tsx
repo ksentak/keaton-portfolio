@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Pages
 import Home from './pages/Home';
@@ -12,7 +11,7 @@ import Navbar from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/style.css';
 
-const App = () => {
+const App:React.FC = () => {
 	return (
 		<Router>
 			<Navbar />

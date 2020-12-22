@@ -1,10 +1,9 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
-const ContactInfo = () => {
+const ContactInfo:React.FC = () => {
 	return (
 		<div className='ContactForm'>
 			<div className='container'>

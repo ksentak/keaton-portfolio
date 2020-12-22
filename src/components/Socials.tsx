@@ -1,11 +1,10 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import { faMedium } from '@fortawesome/free-brands-svg-icons';
 
-const Socials = () => {
+const Socials:React.FC = () => {
 	return (
 		<div className='Socials'>
 			<div className='col-sm-12 text-center'>

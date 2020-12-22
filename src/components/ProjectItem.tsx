@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Modal } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -6,18 +6,25 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
-const ProjectItem = (props) => {
-	const {
-		title,
-		imgSrc,
-		imgAlt,
-		viewCode,
-		viewSite,
-		projectDescription
-	} = props;
+interface Props {
+	title: string;
+	imgSrc: string;
+	imgAlt: string;
+	viewCode: string;
+	viewSite: string;
+	projectDescription: string;
+}
 
-	const [modal, setModal] = useState(false);
-	const toggle = () => setModal(!modal);
+const ProjectItem:React.FC<Props> = ({
+	title,
+	imgSrc,
+	imgAlt,
+	viewCode,
+	viewSite,
+	projectDescription
+}: Props) => {
+	const [modal, setModal] = useState<boolean>(false);
+	const toggle = (): void => setModal(!modal);
 
 	return (
 		<>

@@ -1,14 +1,20 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import _ from 'lodash/fp';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-const ContactForm = () => {
+interface data {
+	name: string;
+	email: string;
+	subject: string;
+	message: string;
+}
+
+const ContactForm:React.FC = () => {
 	const { register, errors, handleSubmit, reset } = useForm();
 
-	const toastifySuccess = () => {
+	const toastifySuccess = () :void => {
 		toast('Form sent!', {
 			position: 'bottom-right',
 			autoClose: 5000,
@@ -20,7 +26,7 @@ const ContactForm = () => {
 		});
 	};
 
-	const onSubmit = (data) => {
+	const onSubmit = (data: data) => {
 		// Send form email
 		let templateParams = {
 			name: data.name,
@@ -47,7 +53,7 @@ const ContactForm = () => {
 							<form
 								id='contact-form'
 								onSubmit={handleSubmit(onSubmit)}
-								noValidate
+								noValidate={true}
 							>
 								{/* Row 1 of form */}
 								<div className='row formRow'>
@@ -56,17 +62,17 @@ const ContactForm = () => {
 											type='text'
 											name='name'
 											ref={register({
-												required: true,
-												maxLength: 30
+												required: { value: true, message: 'Please enter your name' },
+												maxLength: {
+													value: 30,
+													message: 'Please use 30 characters or less'
+												}
 											})}
 											className='form-control formInput'
 											placeholder='Name'
 										></input>
-										{_.get('name.type', errors) === 'required' && (
-											<p>Please enter your name</p>
-										)}
-										{_.get('name.type', errors) === 'maxLength' && (
-											<p>Please use 30 characters or less</p>
+										{errors.name && (
+											<span className='errorMessage'>{errors.name.message}</span>
 										)}
 									</div>
 									<div className='col-6'>
@@ -79,9 +85,12 @@ const ContactForm = () => {
 											})}
 											className='form-control formInput'
 											placeholder='Email address'
-											noValidate
 										></input>
-										{errors.email && <p>Please enter a valid email address</p>}
+										{errors.email && (
+											<span className='errorMessage'>
+												Please enter a valid email address
+											</span>
+										)}
 									</div>
 								</div>
 								{/* Row 2 of form */}
@@ -91,17 +100,17 @@ const ContactForm = () => {
 											type='text'
 											name='subject'
 											ref={register({
-												required: true,
-												maxLength: 75
+												required: { value: true, message: 'Please enter a subject' },
+												maxLength: {
+													value: 75,
+													message: 'Subject cannot exceed 75 characters'
+												}
 											})}
 											className='form-control formInput'
 											placeholder='Subject'
 										></input>
-										{_.get('subject.type', errors) === 'required' && (
-											<p>Please enter a subject</p>
-										)}
-										{_.get('subject.type', errors) === 'maxLength' && (
-											<p>Subject cannot exceed 75 characters</p>
+										{errors.subject && (
+											<span className='errorMessage'>{errors.subject.message}</span>
 										)}
 									</div>
 								</div>
@@ -109,7 +118,7 @@ const ContactForm = () => {
 								<div className='row formRow'>
 									<div className='col'>
 										<textarea
-											rows='5'
+											rows={3}
 											name='message'
 											ref={register({
 												required: true
@@ -117,7 +126,9 @@ const ContactForm = () => {
 											className='form-control formInput'
 											placeholder='Message'
 										></textarea>
-										{errors.message && <p>Please enter a message</p>}
+										{errors.message && (
+											<span className='errorMessage'>Please enter a message</span>
+										)}
 									</div>
 								</div>
 								<button className='submit-btn' type='submit'>

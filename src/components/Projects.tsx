@@ -1,4 +1,3 @@
-import React from 'react';
 import ProjectItem from './ProjectItem';
 import ReactColors from '../assets/images/react-colors.png';
 import ReactAuth from '../assets/images/react-auth.png';
@@ -7,7 +6,7 @@ import GoogleBooks from '../assets/images/GoogleBooks.png';
 import Omega from '../assets/images/omega.png';
 import TimeMachine from '../assets/images/time_machine.png';
 
-const Projects = () => {
+const Projects:React.FC = () => {
 	return (
 		<div className='Projects'>
 			<div className='container'>
@@ -27,9 +26,8 @@ const Projects = () => {
 						projectDescription={`A react application that allows users to view, create, and delete different color palettes. The user can copy any individual color's HEX, RGB, or RGBA code to their clipboard, as well as adjust the shade of each palette.`}
 						title={'React Colors'}
 						viewCode={'https://github.com/ksentak/react-colors'}
-						viewSite={'https://react-colors-01.netlify.com/'}
+						viewSite={'https://react-colors-01.netlify.com/'} 
 					/>
-
 					{/* Project 2 */}
 					<ProjectItem
 						imgSrc={ReactAuth}
@@ -39,7 +37,6 @@ const Projects = () => {
 						viewCode={'https://github.com/ksentak/react-user-auth'}
 						viewSite={'https://react-user-auth.herokuapp.com/'}
 					/>
-
 					{/* Project 3 */}
 					<ProjectItem
 						imgSrc={LibertyBeans}
@@ -49,7 +46,6 @@ const Projects = () => {
 						viewCode={'https://github.com/ksentak/LB-Coffee'}
 						viewSite={'https://ksentak.github.io/LB-Coffee/'}
 					/>
-
 					{/* Project 4 */}
 					<ProjectItem
 						imgSrc={GoogleBooks}
@@ -59,7 +55,6 @@ const Projects = () => {
 						viewCode={'https://github.com/ksentak/google-books-app'}
 						viewSite={'https://google-books-app-01.herokuapp.com/'}
 					/>
-
 					{/* Project 5 */}
 					<ProjectItem
 						imgSrc={Omega}
@@ -69,7 +64,6 @@ const Projects = () => {
 						viewCode={'https://github.com/ksentak/omegawo-app'}
 						viewSite={'https://omegaworkout01.herokuapp.com/'}
 					/>
-
 					{/* Project 6 */}
 					<ProjectItem
 						imgSrc={TimeMachine}
