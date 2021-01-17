@@ -1,7 +1,7 @@
 # Keaton React Portfolio
 
 - My personal portfolio website
-- Built with React
+- Built with React/Gatsby
 
 ---
 
@@ -11,7 +11,7 @@ https://keatonsentak.com/
 
 ---
 
-![Home Page](./src/assets/images/portfolio-home.png)
+![Home Page](./src/images/portfolio-home.png)
 
 ---
 
