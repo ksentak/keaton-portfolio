@@ -1,7 +1,7 @@
 import React from 'react';
-import ContactInfo from '../components/ContactInfo';
-import ContactForm from '../components/ContactForm';
-import Footer from '../components/Footer';
+import ContactInfo from '../components/contactinfo';
+import ContactForm from '../components/contactform';
+import Footer from '../components/footer';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
