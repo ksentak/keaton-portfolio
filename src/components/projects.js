@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectItem from './ProjectItem';
+import ProjectItem from './projectitem';
 import ReactColors from '../images/react-colors.png';
 import ReactAuth from '../images/react-auth.png';
 import LibertyBeans from '../images/liberty-beans.png';

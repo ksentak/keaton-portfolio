@@ -1,6 +1,6 @@
 import React from 'react';
 import Particles from 'react-tsparticles';
-import Socials from './Socials';
+import Socials from './socials';
 
 const Banner = () => {
   const config = {
