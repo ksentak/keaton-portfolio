@@ -318,14 +318,11 @@ form {
   padding: 0;
 }
 
-.submit-feedback {
+#notifyToast {
   color: #fff;
   border-radius: 6px;
   width: 200px;
   margin-left: 75px;
-}
-
-.success {
   background-color: #28a745;
 }
 

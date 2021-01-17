@@ -15,26 +15,33 @@ const ContactForm = () => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: false,
-      className: 'submit-feedback success'
+      className: 'submit-feedback success',
+      toastId: 'notifyToast'
     });
   };
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     // Send form email
-    let templateParams = {
-      name: data.name,
-      email: data.email,
-      subject: data.subject,
-      message: data.message
-    };
-    emailjs.send(
-      process.env.GATSBY_SERVICE_ID,
-      process.env.GATSBY_TEMPLATE_ID,
-      templateParams,
-      process.env.GATSBY_USER_ID
-    );
-    reset();
-    toastifySuccess();
+    try {
+      const templateParams = {
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message
+      };
+
+      await emailjs.send(
+        process.env.GATSBY_SERVICE_ID,
+        process.env.GATSBY_TEMPLATE_ID,
+        templateParams,
+        process.env.GATSBY_USER_ID
+      );
+
+      reset();
+      toastifySuccess();
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
@@ -43,7 +50,7 @@ const ContactForm = () => {
         <div className='row'>
           <div className='col-12 text-center'>
             <div className='contactForm'>
-              <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate={true}>
+              <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
                 {/* Row 1 of form */}
                 <div className='row formRow'>
                   <div className='col-6'>

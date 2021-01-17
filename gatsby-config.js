@@ -20,7 +20,7 @@ module.exports = {
       options: {
         name: `keaton-gatsby-portfolio`,
         short_name: `keaton-portfolio`,
-        start_url: `/`,
+        start_url: `https://keatonsentak.com/`,
         icon: `src/images/favicon.png`
       }
     }
