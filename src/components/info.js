@@ -1,5 +1,4 @@
 import React from 'react';
-import PDF from '../files/KeatonSentakResume.pdf';
 import Headshot from '../images/profile-headshot.jpg';
 
 const Info = () => {
@@ -28,7 +27,7 @@ const Info = () => {
               working in a collaborative environment to create meaningful web applications and solve
               programming challenges that benefit the end user.
             </p>
-            <a href={PDF} target='_blank' rel='noopener noreferrer'>
+            <a href={`KeatonSentakResume.pdf`} target='_blank' rel='noopener noreferrer'>
               <button className='resume-btn mt-2 mb-3'>Download Resume</button>
             </a>
           </div>
