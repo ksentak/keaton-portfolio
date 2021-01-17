@@ -21,6 +21,8 @@ module.exports = {
         name: `keaton-gatsby-portfolio`,
         short_name: `keaton-portfolio`,
         start_url: `https://keatonsentak.com/`,
+        background_color: `#1f2235`,
+        theme_color: `#ff4a57`,
         icon: `src/images/favicon.png`
       }
     }
