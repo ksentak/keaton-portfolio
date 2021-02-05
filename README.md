@@ -11,10 +11,6 @@ https://keatonsentak.com/
 
 ---
 
-![Home Page](./src/images/portfolio-home.png)
-
----
-
 ##### Author
 
 Keaton Sentak - [Portfolio](https://keatonsentak.com) | [GitHub](https://github.com/ksentak)

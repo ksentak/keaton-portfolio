@@ -1,11 +1,11 @@
 import React from 'react';
 import ProjectItem from './projectitem';
+import MernShop from '../images/mern-shop.png';
 import ReactColors from '../images/react-colors.png';
 import ReactAuth from '../images/react-auth.png';
 import LibertyBeans from '../images/liberty-beans.png';
-import GoogleBooks from '../images/GoogleBooks.png';
-import Omega from '../images/omega.png';
-import VueNotes from '../images/vueNotes.png';
+import GoogleBooks from '../images/google-books.png';
+import VueNotes from '../images/vue-notes.png';
 
 const Projects = () => {
   return (
@@ -21,6 +21,16 @@ const Projects = () => {
         </div>
         {/* Row 2 */}
         <div className='row text-center'>
+          {/* Project 1 */}
+          <ProjectItem
+            imgSrc={MernShop}
+            imgAlt={'MERNshop'}
+            projectDescription={`E-commerce store front built with the MERN stack. Uses the PayPal API to allow users to 'purchase' items from the store.`}
+            title={'MERNshop'}
+            viewCode={'https://github.com/ksentak/mernshop'}
+            viewSite={'https://mernshop01.herokuapp.com'}
+          />
+          {/* Project 2 */}
           <ProjectItem
             imgSrc={ReactColors}
             imgAlt={'React-Colors Project'}
@@ -29,7 +39,16 @@ const Projects = () => {
             viewCode={'https://github.com/ksentak/react-colors'}
             viewSite={'https://react-colors-01.netlify.com/'}
           />
-          {/* Project 2 */}
+          {/* Project 3 */}
+          <ProjectItem
+            imgSrc={VueNotes}
+            imgAlt={'Vue Notes Project'}
+            projectDescription={`Vue Notes is based off of Google's note-taking app, Keep. Using Vue, Vuex, Vuetify, & Firebase, a user can jot down notes to serve as reminders for later. The application has total CRUD functionality and notes can be colored coded for optimal organization.`}
+            title={'Vue Notes'}
+            viewCode={'https://github.com/ksentak/vue-notes'}
+            viewSite={'https://vue-notes01.netlify.app/'}
+          />
+          {/* Project 4 */}
           <ProjectItem
             imgSrc={ReactAuth}
             imgAlt={'React-Auth Project'}
@@ -38,16 +57,7 @@ const Projects = () => {
             viewCode={'https://github.com/ksentak/react-user-auth'}
             viewSite={'https://react-user-auth.herokuapp.com/'}
           />
-          {/* Project 3 */}
-          <ProjectItem
-            imgSrc={LibertyBeans}
-            imgAlt={'Liberty-Beans Project'}
-            projectDescription={`A small business coffee shop website that I built to display my skills in front-end web development. This website was created with a mobile-first design and a simple user interface, in order to provide a better user experience. Additionally, I developed a React version of this site.`}
-            title={'Liberty Beans Coffee'}
-            viewCode={'https://github.com/ksentak/LB-Coffee'}
-            viewSite={'https://ksentak.github.io/LB-Coffee/'}
-          />
-          {/* Project 4 */}
+          {/* Project 5 */}
           <ProjectItem
             imgSrc={GoogleBooks}
             imgAlt={'Google-Books Project'}
@@ -56,23 +66,14 @@ const Projects = () => {
             viewCode={'https://github.com/ksentak/google-books-app'}
             viewSite={'https://google-books-app-01.herokuapp.com/'}
           />
-          {/* Project 5 */}
-          <ProjectItem
-            imgSrc={Omega}
-            imgAlt={'Omega Project'}
-            projectDescription={`A full-stack MERN application which allows users to create, plan, and keep track of their weekly workouts.`}
-            title={'Omega'}
-            viewCode={'https://github.com/ksentak/omegawo-app'}
-            viewSite={'https://omegaworkout01.herokuapp.com/'}
-          />
           {/* Project 6 */}
           <ProjectItem
-            imgSrc={VueNotes}
-            imgAlt={'Vue Notes Project'}
-            projectDescription={`Vue Notes is based off of Google's note-taking app, Keep. Using Vue, Vuex, Vuetify, & Firebase, a user can jot down notes to serve as reminders for later. The application has total CRUD functionality and notes can be colored coded for optimal organization.`}
-            title={'Vue Notes'}
-            viewCode={'https://github.com/ksentak/vue-notes'}
-            viewSite={'https://vue-notes01.netlify.app/'}
+            imgSrc={LibertyBeans}
+            imgAlt={'Liberty-Beans Project'}
+            projectDescription={`A small business coffee shop website that I built to display my skills in front-end web development. This website was created with a mobile-first design and a simple user interface, in order to provide a better user experience. Additionally, I developed a React version of this site.`}
+            title={'Liberty Beans Coffee'}
+            viewCode={'https://github.com/ksentak/LB-Coffee'}
+            viewSite={'https://ksentak.github.io/LB-Coffee/'}
           />
         </div>
       </div>
