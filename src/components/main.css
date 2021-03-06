@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
-  --primary: #ff4a57;
-  --secondary: #1f2235;
-  --secondary-light: #282c45;
+  --primary: #2da8d8;
+  --dark: #24292e;
+  --dark-lighten: #384048;
+  --redAlt: #d9514e;
 }
 
 body {
   font-family: Poppins;
-  background: var(--secondary);
+  background: var(--dark);
   color: #dfdfdf;
   line-height: 26px;
 }
@@ -148,7 +149,7 @@ ol {
 .social-inline-item a {
   height: 50px;
   width: 50px;
-  background-color: var(--secondary);
+  background-color: var(--dark);
   color: white;
   font-size: 20px;
   padding: 12px;
@@ -177,7 +178,7 @@ ol {
 }
 
 .resume-btn {
-  background-color: var(--secondary);
+  background-color: var(--dark);
   color: #fff !important;
   padding: 18px 40px;
   border: 2px solid var(--primary);
@@ -227,7 +228,7 @@ ol {
 
 /* Modals */
 .modal-body {
-  background-color: var(--secondary-light);
+  background-color: var(--dark-lighten);
 }
 
 .portfolio-modal .close {
@@ -242,7 +243,7 @@ ol {
 }
 
 .modal-content {
-  background-color: var(--secondary-light);
+  background-color: var(--dark-lighten);
 }
 
 .portfolio-modal-title {
@@ -260,7 +261,7 @@ ol {
 }
 
 .modal-btn {
-  background-color: var(--secondary-light);
+  background-color: var(--dark-lighten);
   color: #fff !important;
   padding: 10px 20px;
   border: 2px solid var(--primary);
@@ -285,7 +286,7 @@ ol {
 /* Contact */
 form {
   margin-top: 20px;
-  background: var(--secondary);
+  background: var(--dark);
 }
 
 .formRow {
@@ -294,13 +295,13 @@ form {
 
 .formInput {
   padding: 25px 10px;
-  background-color: var(--secondary-light);
+  background-color: var(--dark-lighten);
   border: none;
   color: white;
 }
 
 .formInput:focus {
-  background-color: var(--secondary-light);
+  background-color: var(--dark-lighten);
   outline: none;
   box-shadow: 0 0 0 2px var(--primary);
   color: white;
@@ -312,7 +313,7 @@ form {
 }
 
 .errorMessage {
-  color: var(--primary);
+  color: var(--redAlt);
   font-size: 14px;
   margin: 0;
   padding: 0;
@@ -330,7 +331,7 @@ form {
   padding: 25px;
   padding-left: 20px;
   border-radius: 6px;
-  background: var(--secondary-light);
+  background: var(--dark-lighten);
 }
 
 .contact-info span {
