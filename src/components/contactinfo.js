@@ -40,7 +40,7 @@ const ContactInfo = () => {
                   fixedWidth
                 ></FontAwesomeIcon>
                 <span>Send me an email:</span>
-                <p>keatonsentak@gmail.com</p>
+                <p>keatonjs@protonmail.com</p>
               </div>
             </div>
           </div>
