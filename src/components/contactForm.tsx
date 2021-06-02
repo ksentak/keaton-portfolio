@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-interface data {
+interface Data {
   name: string;
   email: string;
   subject: string;
@@ -31,10 +31,10 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const onSubmit = async (data: data) => {
+  const onSubmit = async (data: Data) => {
     // Send form email
     try {
-      const templateParams = {
+      const templateParams: Data = {
         name: data.name,
         email: data.email,
         subject: data.subject,
@@ -42,8 +42,8 @@ const ContactForm: React.FC = () => {
       };
 
       await emailjs.send(
-        process.env.GATSBY_SERVICE_ID,
-        process.env.GATSBY_TEMPLATE_ID,
+        process.env.GATSBY_SERVICE_ID || '',
+        process.env.GATSBY_TEMPLATE_ID || '',
         templateParams,
         process.env.GATSBY_USER_ID
       );

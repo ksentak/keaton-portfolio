@@ -1,5 +1,4 @@
 import React from 'react';
-import Headshot from '../images/profile-headshot.jpg';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const Info: React.FC = () => {
@@ -18,7 +17,7 @@ const Info: React.FC = () => {
         <div className='row text-md-left text-center'>
           <div className='col-md-6 mb-3'>
             <StaticImage
-              src='../images/portfolio-headshot.jpg'
+              src='portfolio-headshot.jpg'
               className='img-fluid profile-picture'
               alt='Profile'
             />
