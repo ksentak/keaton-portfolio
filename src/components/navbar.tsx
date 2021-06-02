@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
       <nav className='navbar navbar-expand-sm'>
         <div className='container'>
           <button
-            className='navbar-toggler ml-auto'
+            className='navbar-toggler ms-auto'
             type='button'
             aria-controls='navbarMobile'
             aria-expanded='false'
@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
             <span className='navbar-toggler-icon' />
           </button>
           <div className={'collapse navbar-collapse ' + show} id='navbarMobile'>
-            <ul id='menu-primary' className='navbar-nav ml-auto'>
+            <ul id='menu-primary' className='navbar-nav ms-auto'>
               {/* Home */}
               <li onClick={toggleNav}>
                 <Link to='/' activeClassName='active' className='nav-Link'>
