@@ -14,7 +14,7 @@ const Info = () => {
           </div>
         </div>
         {/* Row 2 */}
-        <div className='row text-md-left text-center'>
+        <div className='row text-md-start text-center'>
           <div className='col-md-6 mb-3'>
             <img src={Headshot} className='img-fluid profile-picture' alt='Profile' />
           </div>

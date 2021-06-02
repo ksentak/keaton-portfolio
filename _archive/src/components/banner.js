@@ -52,7 +52,7 @@ const Banner = () => {
   return (
     <div className='Banner'>
       <Particles className='particles' options={config} />
-      <div className='jumbotron jumbotron-fluid'>
+      <div className='jumbotron'>
         <div className='banner-content'>
           <h1>
             <span className='main-color'>Keaton</span> Sentak
