@@ -70,6 +70,13 @@ ol {
   border-radius: 100px;
   margin-bottom: 25px;
 }
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
 /* End of Main */
 
 /* Navbar */
@@ -240,6 +247,8 @@ ol {
   line-height: 40px;
   color: var(--primary);
   opacity: 1;
+  border: none;
+  background-color: var(--dark-lighten);
 }
 
 .modal-content {
