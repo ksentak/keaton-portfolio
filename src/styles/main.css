@@ -333,12 +333,12 @@ form {
   padding: 0;
 }
 
-#notifyToast {
+.Toastify__toast {
   color: #fff;
   border-radius: 6px;
   width: 200px;
   margin-left: 75px;
-  background-color: #28a745;
+  background-color: #28a745 !important;
 }
 
 .contact-info {
@@ -368,10 +368,4 @@ form {
   font-size: 32px;
 }
 
-@media (max-width: 768px) {
-  .submit-message {
-    width: 125px;
-    margin-left: 200px;
-  }
-}
 /* End of Contact */

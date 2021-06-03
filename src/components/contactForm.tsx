@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
@@ -12,6 +12,7 @@ interface Data {
 }
 
 const ContactForm: React.FC = () => {
+  const [disabled, setDisabled] = useState(false);
   const {
     register,
     handleSubmit,
@@ -27,19 +28,22 @@ const ContactForm: React.FC = () => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: false,
-      className: 'submit-feedback success'
+      className: 'submit-feedback'
     });
   };
 
   const onSubmit = async (data: Data) => {
     // Send form email
     try {
+      setDisabled(true);
       const templateParams: Data = {
         name: data.name,
         email: data.email,
         subject: data.subject,
         message: data.message
       };
+
+      console.log(templateParams);
 
       await emailjs.send(
         process.env.GATSBY_SERVICE_ID || '',
@@ -50,6 +54,7 @@ const ContactForm: React.FC = () => {
 
       reset();
       toastifySuccess();
+      setDisabled(false);
     } catch (e) {
       console.log(e);
     }
@@ -133,7 +138,7 @@ const ContactForm: React.FC = () => {
                     {errors.message && <span className='errorMessage'>Please enter a message</span>}
                   </div>
                 </div>
-                <button className='primary-btn' type='submit'>
+                <button className='primary-btn' disabled={disabled} type='submit'>
                   Submit
                 </button>
               </form>
