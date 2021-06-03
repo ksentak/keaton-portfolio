@@ -1,7 +1,7 @@
 import React from 'react';
 import Headshot from '../images/profile-headshot.jpg';
 
-const Info = () => {
+const Info: React.FC = () => {
   return (
     <div className='Info'>
       <div className='container'>
@@ -14,7 +14,7 @@ const Info = () => {
           </div>
         </div>
         {/* Row 2 */}
-        <div className='row text-md-left text-center'>
+        <div className='row text-md-start text-center'>
           <div className='col-md-6 mb-3'>
             <img src={Headshot} className='img-fluid profile-picture' alt='Profile' />
           </div>
@@ -27,7 +27,7 @@ const Info = () => {
               working in a collaborative environment to create meaningful web applications and solve
               programming challenges that benefit the end user.
             </p>
-            <a href={`KeatonSentakResume.pdf`} target='_blank' rel='noopener noreferrer'>
+            <a href={`Keaton-Sentak-Resume.pdf`} target='_blank' rel='noopener noreferrer'>
               <button className='resume-btn mt-2 mb-3'>Download Resume</button>
             </a>
           </div>

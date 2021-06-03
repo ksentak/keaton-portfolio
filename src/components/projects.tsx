@@ -1,13 +1,13 @@
 import React from 'react';
-import ProjectItem from './projectitem';
+import ProjectItem from './projectItem';
 import MernShop from '../images/mern-shop.png';
 import ReactColors from '../images/react-colors.png';
-import ReactAuth from '../images/react-auth.png';
-import LibertyBeans from '../images/liberty-beans.png';
-import GoogleBooks from '../images/google-books.png';
 import VueNotes from '../images/vue-notes.png';
+import ReactAuth from '../images/react-auth.png';
+import GoogleBooks from '../images/google-books.png';
+import LibertyBeans from '../images/liberty-beans.png';
 
-const Projects = () => {
+const Projects: React.FC = () => {
   return (
     <div className='Projects'>
       <div className='container'>
@@ -24,12 +24,13 @@ const Projects = () => {
           {/* Project 1 */}
           <ProjectItem
             imgSrc={MernShop}
-            imgAlt={'MERNshop'}
+            imgAlt={'Mern Shop'}
             projectDescription={`E-commerce store front built with the MERN stack. Uses the PayPal API to allow users to 'purchase' items from the store.`}
             title={'MERNshop'}
             viewCode={'https://github.com/ksentak/mernshop'}
             viewSite={'https://mernshop01.herokuapp.com'}
           />
+
           {/* Project 2 */}
           <ProjectItem
             imgSrc={ReactColors}
@@ -39,6 +40,7 @@ const Projects = () => {
             viewCode={'https://github.com/ksentak/react-colors'}
             viewSite={'https://react-colors-01.netlify.com/'}
           />
+
           {/* Project 3 */}
           <ProjectItem
             imgSrc={VueNotes}
@@ -48,6 +50,7 @@ const Projects = () => {
             viewCode={'https://github.com/ksentak/vue-notes'}
             viewSite={'https://vue-notes01.netlify.app/'}
           />
+
           {/* Project 4 */}
           <ProjectItem
             imgSrc={ReactAuth}
@@ -57,6 +60,7 @@ const Projects = () => {
             viewCode={'https://github.com/ksentak/react-user-auth'}
             viewSite={'https://react-user-auth.herokuapp.com/'}
           />
+
           {/* Project 5 */}
           <ProjectItem
             imgSrc={GoogleBooks}
@@ -66,6 +70,7 @@ const Projects = () => {
             viewCode={'https://github.com/ksentak/google-books-app'}
             viewSite={'https://google-books-app-01.herokuapp.com/'}
           />
+
           {/* Project 6 */}
           <ProjectItem
             imgSrc={LibertyBeans}
@@ -80,4 +85,5 @@ const Projects = () => {
     </div>
   );
 };
+
 export default Projects;

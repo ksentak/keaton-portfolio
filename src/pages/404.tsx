@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const NotFoundPage = () => {
+const ErrorPage = () => {
   return (
     <Layout>
       <SEO title='404: Not found' />
@@ -14,7 +14,7 @@ const NotFoundPage = () => {
           </h1>
           <h6>Sorry but the page you are looking for is not available.</h6>
           <Link to='/'>
-            <button className='red-btn'>Return home</button>
+            <button className='primary-btn'>Return home</button>
           </Link>
         </div>
       </div>
@@ -22,4 +22,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default ErrorPage;

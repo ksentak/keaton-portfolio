@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <div className='Footer'>
       <div className='col-12 text-center copyright'>

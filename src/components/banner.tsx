@@ -2,18 +2,18 @@ import React from 'react';
 import Particles from 'react-tsparticles';
 import Socials from './socials';
 
-const Banner = () => {
+const Banner: React.FC = () => {
   const config = {
     fpsLimit: 60,
     particles: {
       number: {
-        value: 160,
+        value: 100,
         density: {
           enable: false
         }
       },
       color: {
-        value: '#ffffff'
+        value: '#90caf9'
       },
       shape: {
         type: 'circle',
@@ -26,7 +26,7 @@ const Banner = () => {
         }
       },
       opacity: {
-        value: 0.1
+        value: 0.4
       },
       size: {
         value: 5,
@@ -36,15 +36,10 @@ const Banner = () => {
           size_min: 0.3
         }
       },
-      line_linked: {
-        enabled: false
-      },
       move: {
         enable: true,
         random: true,
-        speed: 1,
-        direction: 'top',
-        out_mode: 'out'
+        speed: 1
       }
     }
   };

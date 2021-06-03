@@ -1,7 +1,7 @@
 # Keaton React Portfolio
 
-- My personal portfolio website
-- Built with React/Gatsby
+-   My personal portfolio website
+-   Built with React/Gatsby/Typescript
 
 ---
 

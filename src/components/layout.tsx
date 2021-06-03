@@ -1,21 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
+import React, { ReactNode } from 'react';
 import Navbar from './navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './main.css';
+import '../styles/main.css';
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Navbar />
       <main>{children}</main>
     </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
 };
 
 export default Layout;

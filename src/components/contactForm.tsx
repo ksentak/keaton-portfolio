@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-const ContactForm = () => {
-  const { register, errors, handleSubmit, reset } = useForm();
+interface Data {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
-  const toastifySuccess = () => {
+const ContactForm: React.FC = () => {
+  const [disabled, setDisabled] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm();
+
+  const toastifySuccess = (): void => {
     toast('Form sent!', {
       position: 'bottom-right',
       autoClose: 5000,
@@ -15,30 +28,33 @@ const ContactForm = () => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: false,
-      className: 'submit-feedback success',
-      toastId: 'notifyToast'
+      className: 'submit-feedback'
     });
   };
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: Data) => {
     // Send form email
     try {
-      const templateParams = {
+      setDisabled(true);
+      const templateParams: Data = {
         name: data.name,
         email: data.email,
         subject: data.subject,
         message: data.message
       };
 
+      console.log(templateParams);
+
       await emailjs.send(
-        process.env.GATSBY_SERVICE_ID,
-        process.env.GATSBY_TEMPLATE_ID,
+        process.env.GATSBY_SERVICE_ID || '',
+        process.env.GATSBY_TEMPLATE_ID || '',
         templateParams,
         process.env.GATSBY_USER_ID
       );
 
       reset();
       toastifySuccess();
+      setDisabled(false);
     } catch (e) {
       console.log(e);
     }
@@ -50,14 +66,18 @@ const ContactForm = () => {
         <div className='row'>
           <div className='col-12 text-center'>
             <div className='contactForm'>
-              <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
+              <form
+                id='contact-form'
+                onSubmit={handleSubmit(onSubmit)}
+                method='POST'
+                noValidate={true}
+              >
                 {/* Row 1 of form */}
                 <div className='row formRow'>
                   <div className='col-6'>
                     <input
                       type='text'
-                      name='name'
-                      ref={register({
+                      {...register('name', {
                         required: { value: true, message: 'Please enter your name' },
                         maxLength: {
                           value: 30,
@@ -72,8 +92,7 @@ const ContactForm = () => {
                   <div className='col-6'>
                     <input
                       type='email'
-                      name='email'
-                      ref={register({
+                      {...register('email', {
                         required: true,
                         pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
                       })}
@@ -90,8 +109,7 @@ const ContactForm = () => {
                   <div className='col'>
                     <input
                       type='text'
-                      name='subject'
-                      ref={register({
+                      {...register('subject', {
                         required: { value: true, message: 'Please enter a subject' },
                         maxLength: {
                           value: 75,
@@ -111,8 +129,7 @@ const ContactForm = () => {
                   <div className='col'>
                     <textarea
                       rows={3}
-                      name='message'
-                      ref={register({
+                      {...register('message', {
                         required: true
                       })}
                       className='form-control formInput'
@@ -121,7 +138,7 @@ const ContactForm = () => {
                     {errors.message && <span className='errorMessage'>Please enter a message</span>}
                   </div>
                 </div>
-                <button className='red-btn' type='submit'>
+                <button className='primary-btn' disabled={disabled} type='submit'>
                   Submit
                 </button>
               </form>

@@ -62,7 +62,7 @@ ol {
   padding-left: 20px;
 }
 
-.red-btn {
+.primary-btn {
   background-color: var(--primary);
   color: #fff !important;
   padding: 15px 50px;
@@ -70,6 +70,13 @@ ol {
   border-radius: 100px;
   margin-bottom: 25px;
 }
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1140px !important;
+  }
+}
+
 /* End of Main */
 
 /* Navbar */
@@ -98,6 +105,10 @@ ol {
   background: transparent !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
 .navbar-toggler-icon {
@@ -130,7 +141,8 @@ ol {
   background: none;
   position: absolute;
   text-align: center;
-  top: 10%;
+  padding: 2rem 1rem;
+  top: 15%;
   width: 100%;
   margin: 0;
 }
@@ -240,6 +252,8 @@ ol {
   line-height: 40px;
   color: var(--primary);
   opacity: 1;
+  border: none;
+  background-color: var(--dark-lighten);
 }
 
 .modal-content {
@@ -294,7 +308,7 @@ form {
 }
 
 .formInput {
-  padding: 25px 10px;
+  padding: 15px 10px;
   background-color: var(--dark-lighten);
   border: none;
   color: white;
@@ -319,12 +333,12 @@ form {
   padding: 0;
 }
 
-#notifyToast {
+.Toastify__toast {
   color: #fff;
   border-radius: 6px;
   width: 200px;
   margin-left: 75px;
-  background-color: #28a745;
+  background-color: #28a745 !important;
 }
 
 .contact-info {
@@ -354,10 +368,4 @@ form {
   font-size: 32px;
 }
 
-@media (max-width: 768px) {
-  .submit-message {
-    width: 125px;
-    margin-left: 200px;
-  }
-}
 /* End of Contact */
