@@ -5,7 +5,7 @@ import ReactColors from '../images/react-colors.png';
 import VueNotes from '../images/vue-notes.png';
 import ReactAuth from '../images/react-auth.png';
 import GoogleBooks from '../images/google-books.png';
-import LibertyBeans from '../images/liberty-beans.png';
+import CodeIt from '../images/code-it.png';
 
 const Projects: React.FC = () => {
   return (
@@ -23,22 +23,22 @@ const Projects: React.FC = () => {
         <div className='row text-center'>
           {/* Project 1 */}
           <ProjectItem
+            imgSrc={CodeIt}
+            imgAlt={'Code It'}
+            projectDescription={`Code It is a custom code and markdown editor that allows a user to run JavaScript in the browser. Users can import npm packages to be used in their code. Users can also create their own React components. Code cells are cumulative and variables that are set in upper cells can be used in cells lower on the page.`}
+            title={'Code It'}
+            viewCode={'https://github.com/ksentak/code-it'}
+            viewSite={'https://code-it-01.netlify.app/'}
+          />
+
+          {/* Project 2 */}
+          <ProjectItem
             imgSrc={MernShop}
             imgAlt={'Mern Shop'}
             projectDescription={`E-commerce store front built with the MERN stack. Uses the PayPal API to allow users to 'purchase' items from the store.`}
             title={'MERNshop'}
             viewCode={'https://github.com/ksentak/mernshop'}
             viewSite={'https://mernshop01.herokuapp.com'}
-          />
-
-          {/* Project 2 */}
-          <ProjectItem
-            imgSrc={ReactColors}
-            imgAlt={'React-Colors Project'}
-            projectDescription={`A react application that allows users to view, create, and delete different color palettes. The user can copy any individual color's HEX, RGB, or RGBA code to their clipboard, as well as adjust the shade of each palette.`}
-            title={'React Colors'}
-            viewCode={'https://github.com/ksentak/react-colors'}
-            viewSite={'https://react-colors-01.netlify.com/'}
           />
 
           {/* Project 3 */}
@@ -73,12 +73,12 @@ const Projects: React.FC = () => {
 
           {/* Project 6 */}
           <ProjectItem
-            imgSrc={LibertyBeans}
-            imgAlt={'Liberty-Beans Project'}
-            projectDescription={`A small business coffee shop website that I built to display my skills in front-end web development. This website was created with a mobile-first design and a simple user interface, in order to provide a better user experience. Additionally, I developed a React version of this site.`}
-            title={'Liberty Beans Coffee'}
-            viewCode={'https://github.com/ksentak/LB-Coffee'}
-            viewSite={'https://ksentak.github.io/LB-Coffee/'}
+            imgSrc={ReactColors}
+            imgAlt={'React-Colors Project'}
+            projectDescription={`A react application that allows users to view, create, and delete different color palettes. The user can copy any individual color's HEX, RGB, or RGBA code to their clipboard, as well as adjust the shade of each palette.`}
+            title={'React Colors'}
+            viewCode={'https://github.com/ksentak/react-colors'}
+            viewSite={'https://react-colors-01.netlify.com/'}
           />
         </div>
       </div>
