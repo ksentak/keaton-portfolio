@@ -40,7 +40,7 @@ const ContactInfo: React.FC = () => {
                   fixedWidth
                 ></FontAwesomeIcon>
                 <span>Send me an email:</span>
-                <p>keatonjs@protonmail.com</p>
+                <p>ksentak01@gmail.com</p>
               </div>
             </div>
           </div>
