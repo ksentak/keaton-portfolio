@@ -26,6 +26,16 @@ module.exports = {
         theme_color: `#ff4a57`,
         icon: `src/images/favicon.png`
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-Q9WM3QN95X'],
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true
+        }
+      }
     }
   ]
 };
