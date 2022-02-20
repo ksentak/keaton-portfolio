@@ -16,7 +16,7 @@ You can get in touch with me by filling out the form on the `Contact` page.
 
 ### https://keatonsentak.com/
 
-![App Screenshot](./src/images/keaton-portfolio.png)
+![App Screenshot](./src/images/app-screenshot.png)
 
 ## Built With
 
