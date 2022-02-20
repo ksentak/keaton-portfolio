@@ -1,17 +1,18 @@
 /* Main */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  --primary: #2da8d8;
-  --dark: #24292e;
-  --dark-lighten: #384048;
+  --light: #fff;
+  --dark: #000;
+  --dark-lighten: #36454f;
+  --gray: #d3d3d3;
   --redAlt: #d9514e;
 }
 
 body {
-  font-family: Poppins;
-  background: var(--dark);
-  color: #dfdfdf;
+  font-family: 'Roboto', sans-serif;
+  background: var(--light);
+  color: var(--dark);
   line-height: 26px;
 }
 
@@ -22,7 +23,7 @@ h4,
 h5,
 h6 {
   word-wrap: break-word;
-  color: #fff;
+  color: var(--dark);
 }
 
 h1:not(:last-child),
@@ -40,7 +41,7 @@ a {
 }
 
 a:hover {
-  color: var(--primary);
+  color: var(--dark);
 }
 
 a:hover,
@@ -50,7 +51,7 @@ a:active {
 }
 
 .main-color {
-  color: var(--primary);
+  color: var(--dark);
 }
 
 .section-title {
@@ -63,12 +64,17 @@ ol {
 }
 
 .primary-btn {
-  background-color: var(--primary);
-  color: #fff !important;
+  background-color: var(--light);
+  color: var(--dark) !important;
   padding: 15px 50px;
-  border: 2px solid var(--primary);
-  border-radius: 100px;
+  border: 2px solid var(--dark);
+  border-radius: 1.25rem;
   margin-bottom: 25px;
+}
+
+.primary-btn:hover {
+  background-color: var(--dark);
+  color: var(--light) !important;
 }
 
 @media (min-width: 1400px) {
@@ -89,16 +95,17 @@ ol {
   padding-right: 0.5em;
   margin: 0 10px;
   font-weight: 500;
-  color: #fff;
+  color: var(--dark);
   font-size: 18px;
 }
 
 .navbar-nav a:hover {
-  color: var(--primary);
+  color: var(--dark);
+  text-decoration: underline;
 }
 
 .navbar-nav .active {
-  color: var(--primary);
+  color: var(--dark);
 }
 
 .navbar-toggler {
@@ -112,7 +119,7 @@ ol {
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(225, 225, 225, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   font-size: 24px;
   text-align: right;
   margin-right: 30px;
@@ -167,16 +174,17 @@ ol {
 .social-inline-item a {
   height: 50px;
   width: 50px;
-  background-color: var(--dark);
-  color: white;
+  background-color: var(--light);
+  color: var(--dark);
   font-size: 20px;
   padding: 12px;
-  border: 2px solid var(--primary);
-  border-radius: 50%;
+  border: 2px solid var(--dark);
+  border-radius: 1.25rem;
 }
 
 .social-inline-item a:hover {
-  background-color: var(--primary);
+  background-color: var(--dark);
+  color: var(--light);
 }
 
 .social-inline-item:not(:last-child) {
@@ -196,15 +204,16 @@ ol {
 }
 
 .resume-btn {
-  background-color: var(--dark);
-  color: #fff !important;
+  background-color: var(--light);
+  color: var(--dark) !important;
   padding: 18px 40px;
-  border: 2px solid var(--primary);
-  border-radius: 100px;
+  border: 2px solid var(--dark);
+  border-radius: 1.25rem;
 }
 
 .resume-btn:hover {
-  background-color: var(--primary);
+  background-color: var(--dark);
+  color: var(--light) !important;
 }
 /* End of Info */
 
@@ -220,7 +229,7 @@ ol {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(255, 74, 87, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 6px;
 }
 
@@ -246,7 +255,7 @@ ol {
 
 /* Modals */
 .modal-body {
-  background-color: var(--dark-lighten);
+  background-color: var(--light);
 }
 
 .portfolio-modal .close {
@@ -256,18 +265,18 @@ ol {
   top: 12px;
   font-size: 26px;
   line-height: 40px;
-  color: var(--primary);
+  color: var(--dark);
   opacity: 1;
   border: none;
-  background-color: var(--dark-lighten);
+  background-color: var(--light);
 }
 
 .modal-content {
-  background-color: var(--dark-lighten);
+  background-color: var(--dark);
 }
 
 .portfolio-modal-title {
-  color: #fff;
+  color: var(--dark);
 }
 
 .modal-img {
@@ -281,32 +290,33 @@ ol {
 }
 
 .modal-btn {
-  background-color: var(--dark-lighten);
-  color: #fff !important;
+  background-color: var(--light);
+  color: var(--dark) !important;
   padding: 10px 20px;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--dark);
   border-radius: 100px;
   margin: 10px;
 }
 
 .modal-icon {
   margin-right: 5px;
-  color: var(--primary);
+  color: var(--dark);
 }
 
 .modal-btn:hover {
-  background-color: var(--primary);
+  background-color: var(--dark);
+  color: var(--light) !important;
 }
 
 .modal-btn:hover .modal-icon {
-  color: #fff;
+  color: var(--light) !important;
 }
 /* End of Projects */
 
 /* Contact */
 form {
   margin-top: 20px;
-  background: var(--dark);
+  background: var(--light);
 }
 
 .formRow {
@@ -315,20 +325,19 @@ form {
 
 .formInput {
   padding: 15px 10px;
-  background-color: var(--dark-lighten);
-  border: none;
-  color: white;
+  background-color: var(--light);
+  border: 1.5px solid var(--dark);
+  border-radius: 1.25rem;
+  color: var(--dark);
 }
 
 .formInput:focus {
-  background-color: var(--dark-lighten);
-  outline: none;
-  box-shadow: 0 0 0 2px var(--primary);
-  color: white;
+  box-shadow: 0 0 0 2px var(--dark);
+  border: 1.75px solid var(--dark);
 }
 
 .formInput::placeholder {
-  color: white;
+  color: var(--dark);
   opacity: 1;
 }
 
@@ -340,7 +349,7 @@ form {
 }
 
 .Toastify__toast {
-  color: #fff;
+  color: var(--light);
   border-radius: 6px;
   width: 200px;
   margin-left: 75px;
@@ -350,8 +359,9 @@ form {
 .contact-info {
   padding: 25px;
   padding-left: 20px;
-  border-radius: 6px;
-  background: var(--dark-lighten);
+  border-radius: 1.25rem;
+  border: 1.5px solid var(--dark);
+  background: var(--light);
 }
 
 .contact-info span {
@@ -359,18 +369,18 @@ form {
   position: relative;
   font-size: 16px;
   top: -10px;
-  color: #fff;
+  color: var(--dark);
   left: 10px;
 }
 
 .contact-info p {
   margin-bottom: 0;
-  color: #fff;
+  color: var(--dark);
   margin-left: 50px;
 }
 
 .contact-icon {
-  color: var(--primary);
+  color: var(--dark);
   font-size: 32px;
 }
 
