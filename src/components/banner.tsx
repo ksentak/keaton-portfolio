@@ -7,13 +7,13 @@ const Banner: React.FC = () => {
     fpsLimit: 60,
     particles: {
       number: {
-        value: 100,
+        value: 75,
         density: {
           enable: false
         }
       },
       color: {
-        value: '#90caf9'
+        value: '#36454F'
       },
       shape: {
         type: 'circle',

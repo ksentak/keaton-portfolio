@@ -14,7 +14,7 @@ const Info: React.FC = () => {
           </div>
         </div>
         {/* Row 2 */}
-        <div className='row text-md-start text-center'>
+        <div className='row text-start'>
           <div className='col-md-6 about-section'>
             <p className='about-text'>
               A software engineer with experience building modern web
@@ -31,7 +31,7 @@ const Info: React.FC = () => {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <button className='resume-btn mt-2 mb-3'>Download Resume</button>
+              <button className='resume-btn'>Download Resume</button>
             </a>
           </div>
           <div className='col-md-6 mb-3'>
