@@ -15,21 +15,27 @@ const Info: React.FC = () => {
         </div>
         {/* Row 2 */}
         <div className='row text-md-start text-center'>
-          <div className='col-md-6 mb-3'>
-            <img src={Headshot} className='img-fluid profile-picture' alt='Profile' />
-          </div>
           <div className='col-md-6 about-section'>
             <p className='about-text'>
-              A full-stack developer with experience building modern web applications and custom
-              software solutions for clients. Proficient in deploying applications to cloud-based
-              servers and well-versed in the project management lifecycle. Looking to contribute
-              long-term organizational value through my knowledge of various programming
-              technologies. Passionate about working in a collaborative environment to create
-              meaningful applications and solve programming challenges that benefit the end user.
+              A software engineer with experience building modern web
+              applications and custom software solutions for clients. Proficient
+              in deploying applications to cloud-based servers and well-versed
+              in the project management lifecycle. Looking to contribute
+              long-term organizational value through my knowledge of various
+              programming technologies. Passionate about working in a
+              collaborative environment to create meaningful applications and
+              solve programming challenges that benefit the end user.
             </p>
-            <a href={`Keaton-Sentak-Resume.pdf`} target='_blank' rel='noopener noreferrer'>
+            <a
+              href={`Keaton-Sentak-Resume.pdf`}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <button className='resume-btn mt-2 mb-3'>Download Resume</button>
             </a>
+          </div>
+          <div className='col-md-6 mb-3'>
+            <img src={Headshot} className='profile-picture' alt='Profile' />
           </div>
         </div>
       </div>

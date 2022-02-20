@@ -142,9 +142,15 @@ ol {
   position: absolute;
   text-align: center;
   padding: 2rem 1rem;
-  top: 15%;
+  top: 20vh;
   width: 100%;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .jumbotron {
+    top: 12vh;
+  }
 }
 
 .banner-content h1 {
@@ -181,7 +187,7 @@ ol {
 /* Info */
 .profile-picture {
   height: 350px;
-  width: 415px;
+  width: 100%;
   border-radius: 6px;
 }
 
