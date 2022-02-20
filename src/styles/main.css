@@ -197,7 +197,7 @@ ol {
 .profile-picture {
   height: 350px;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 1.25rem;
 }
 
 .about-text {
@@ -222,7 +222,8 @@ ol {
   margin: 0.5rem 0 0.5rem 0;
 }
 
-.experience-title {
+.experience-title,
+.education-title {
   font-weight: 700;
 }
 
@@ -230,14 +231,17 @@ ol {
   font-weight: 600;
 }
 
-.experience-dates-location {
+.experience-dates-location,
+.education-degree-dates {
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-.experience-description {
+.experience-description,
+.education-description {
   margin: 0.2rem 0 0.2rem 0;
   font-size: 1rem;
+  line-height: 2rem;
 }
 /* End of Info */
 
@@ -318,7 +322,7 @@ ol {
   color: var(--dark) !important;
   padding: 10px 20px;
   border: 2px solid var(--dark);
-  border-radius: 100px;
+  border-radius: 1.25rem;
   margin: 10px;
 }
 
@@ -374,7 +378,7 @@ form {
 
 .Toastify__toast {
   color: var(--light);
-  border-radius: 6px;
+  border-radius: 1.25rem;
   width: 200px;
   margin-left: 75px;
   background-color: #28a745 !important;
