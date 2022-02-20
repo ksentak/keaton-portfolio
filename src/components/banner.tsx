@@ -52,7 +52,7 @@ const Banner: React.FC = () => {
           <h1>
             <span className='main-color'>Keaton</span> Sentak
           </h1>
-          <h6>Full-Stack Developer</h6>
+          <h6>Software Engineer</h6>
           <Socials />
         </div>
       </div>
