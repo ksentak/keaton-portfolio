@@ -11,14 +11,18 @@ exports.handler = async (event, context, callback) => {
     html: `${message} \n from ${name}`,
   };
 
-  try {
-    await sgMail.send(msg);
+  console.log(msg);
 
+  try {
+    const res = await sgMail.send(msg);
+
+    console.log(res);
     return callback(null, {
       statusCode: 200,
       body: JSON.stringify({ msg: 'Message sent successfully.' }),
     });
   } catch (err) {
+    console.log(err);
     return callback(null, {
       statusCode: 500,
       body: JSON.stringify({ msg: 'Failed to send email.' }),
