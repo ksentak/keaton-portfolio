@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
@@ -17,7 +16,7 @@ const ContactForm: React.FC = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors }
+    formState: { errors },
   } = useForm();
 
   const toastifySuccess = (): void => {
@@ -28,7 +27,7 @@ const ContactForm: React.FC = () => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: false,
-      className: 'submit-feedback'
+      className: 'submit-feedback',
     });
   };
 
@@ -40,20 +39,19 @@ const ContactForm: React.FC = () => {
         name: data.name,
         email: data.email,
         subject: data.subject,
-        message: data.message
+        message: data.message,
       };
 
-      console.log(templateParams);
+      const res = await fetch('.netlify/functions/sendmail', {
+        method: 'POST',
+        body: JSON.stringify(templateParams),
+      });
 
-      await emailjs.send(
-        process.env.GATSBY_SERVICE_ID || '',
-        process.env.GATSBY_TEMPLATE_ID || '',
-        templateParams,
-        process.env.GATSBY_USER_ID
-      );
+      if (res.status === 200) {
+        reset();
+        toastifySuccess();
+      }
 
-      reset();
-      toastifySuccess();
       setDisabled(false);
     } catch (e) {
       console.log(e);
@@ -78,29 +76,39 @@ const ContactForm: React.FC = () => {
                     <input
                       type='text'
                       {...register('name', {
-                        required: { value: true, message: 'Please enter your name' },
+                        required: {
+                          value: true,
+                          message: 'Please enter your name',
+                        },
                         maxLength: {
                           value: 30,
-                          message: 'Please use 30 characters or less'
-                        }
+                          message: 'Please use 30 characters or less',
+                        },
                       })}
                       className='form-control formInput'
                       placeholder='Name'
                     ></input>
-                    {errors.name && <span className='errorMessage'>{errors.name.message}</span>}
+                    {errors.name && (
+                      <span className='errorMessage'>
+                        {errors.name.message}
+                      </span>
+                    )}
                   </div>
                   <div className='col-6'>
                     <input
                       type='email'
                       {...register('email', {
                         required: true,
-                        pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+                        pattern:
+                          /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
                       })}
                       className='form-control formInput'
                       placeholder='Email address'
                     ></input>
                     {errors.email && (
-                      <span className='errorMessage'>Please enter a valid email address</span>
+                      <span className='errorMessage'>
+                        Please enter a valid email address
+                      </span>
                     )}
                   </div>
                 </div>
@@ -110,17 +118,22 @@ const ContactForm: React.FC = () => {
                     <input
                       type='text'
                       {...register('subject', {
-                        required: { value: true, message: 'Please enter a subject' },
+                        required: {
+                          value: true,
+                          message: 'Please enter a subject',
+                        },
                         maxLength: {
                           value: 75,
-                          message: 'Subject cannot exceed 75 characters'
-                        }
+                          message: 'Subject cannot exceed 75 characters',
+                        },
                       })}
                       className='form-control formInput'
                       placeholder='Subject'
                     ></input>
                     {errors.subject && (
-                      <span className='errorMessage'>{errors.subject.message}</span>
+                      <span className='errorMessage'>
+                        {errors.subject.message}
+                      </span>
                     )}
                   </div>
                 </div>
@@ -130,15 +143,23 @@ const ContactForm: React.FC = () => {
                     <textarea
                       rows={3}
                       {...register('message', {
-                        required: true
+                        required: true,
                       })}
                       className='form-control formInput'
                       placeholder='Message'
                     ></textarea>
-                    {errors.message && <span className='errorMessage'>Please enter a message</span>}
+                    {errors.message && (
+                      <span className='errorMessage'>
+                        Please enter a message
+                      </span>
+                    )}
                   </div>
                 </div>
-                <button className='primary-btn' disabled={disabled} type='submit'>
+                <button
+                  className='primary-btn'
+                  disabled={disabled}
+                  type='submit'
+                >
                   Submit
                 </button>
               </form>
