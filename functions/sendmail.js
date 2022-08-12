@@ -6,23 +6,19 @@ exports.handler = async (event, context, callback) => {
 
   const msg = {
     to: process.env.ADMIN_EMAIL,
-    from: email,
+    from: process.env.SENDER_EMAIL,
     subject,
-    html: `${message} \n from ${name}`,
+    html: `${message} \n from ${name} | ${email}`,
   };
 
-  console.log(msg);
-
   try {
-    const res = await sgMail.send(msg);
+    await sgMail.send(msg);
 
-    console.log(res);
     return callback(null, {
       statusCode: 200,
       body: JSON.stringify({ msg: 'Message sent successfully.' }),
     });
   } catch (err) {
-    console.log(err);
     return callback(null, {
       statusCode: 500,
       body: JSON.stringify({ msg: 'Failed to send email.' }),
