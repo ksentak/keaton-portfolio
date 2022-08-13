@@ -78,6 +78,10 @@ ol {
   color: var(--light) !important;
 }
 
+.primary-btn:disabled {
+  background-color: #D3D3D3;
+}
+
 @media (min-width: 1400px) {
   .container {
     max-width: 1140px !important;
@@ -381,7 +385,14 @@ form {
   border-radius: 1.25rem;
   width: 200px;
   margin-left: 75px;
+}
+
+.submit-feedback-success {
   background-color: #28a745 !important;
+}
+
+.submit-feedback-fail {
+  background-color: var(--redAlt) !important;
 }
 
 .contact-info {

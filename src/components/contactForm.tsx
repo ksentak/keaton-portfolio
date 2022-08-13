@@ -27,7 +27,19 @@ const ContactForm: React.FC = () => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: false,
-      className: 'submit-feedback',
+      className: 'submit-feedback-success',
+    });
+  };
+
+  const toastifyFail = (): void => {
+    toast('Uh oh, something went wrong', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      className: 'submit-feedback-fail',
     });
   };
 
@@ -50,6 +62,8 @@ const ContactForm: React.FC = () => {
       if (res.status === 200) {
         reset();
         toastifySuccess();
+      } else {
+        toastifyFail();
       }
 
       setDisabled(false);
