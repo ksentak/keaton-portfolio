@@ -3,8 +3,8 @@ import ProjectItem from './projectItem';
 import MernShop from '../images/mern-shop.png';
 import ReactColors from '../images/react-colors.png';
 import VueNotes from '../images/vue-notes.png';
-import ReactAuth from '../images/react-auth.png';
-import GoogleBooks from '../images/google-books.png';
+import SmartCredential from '../images/smart-credential.png';
+import ContactForm from '../images/contact-form.png';
 import CodeIt from '../images/code-it.png';
 
 const Projects: React.FC = () => {
@@ -53,22 +53,22 @@ const Projects: React.FC = () => {
 
           {/* Project 4 */}
           <ProjectItem
-            imgSrc={ReactAuth}
-            imgAlt={'React-Auth Project'}
-            projectDescription={`A user authentication application I built using React, Passport, and JWT that serves as a template for others and allows a user to sign up/log in. Input validation is included in and deployment to Heroku is made easy.`}
-            title={'React User Authentication'}
-            viewCode={'https://github.com/ksentak/react-user-auth'}
-            viewSite={'https://react-user-auth.herokuapp.com/'}
+            imgSrc={SmartCredential}
+            imgAlt={'Smart Credential Project'}
+            projectDescription={`Smart Credential is a random password generator that is built with Vue. Input your desired password length (4-20 characters) and select the specific character types you would like to include. Generate your password and copy it to your clipboard to use.`}
+            title={'Smart Credential'}
+            viewCode={'https://github.com/ksentak/smart-credential'}
+            viewSite={'https://smart-credential.netlify.app/'}
           />
 
           {/* Project 5 */}
           <ProjectItem
-            imgSrc={GoogleBooks}
-            imgAlt={'Google-Books Project'}
-            projectDescription={`A MERN application in which a user can search for different books using the Google Books API. Once the user searches for a specific book, results are rendered and the user can either favorite a book or view more info about the book.`}
-            title={'Google Books'}
-            viewCode={'https://github.com/ksentak/google-books-app'}
-            viewSite={'https://google-books-app-01.herokuapp.com/'}
+            imgSrc={ContactForm}
+            imgAlt={'React Contact Form'}
+            projectDescription={`React Contact Form is an application that was built to serve as a template to those who want to create a contact form in react without any back-end code.`}
+            title={'React Contact Form'}
+            viewCode={'https://github.com/ksentak/react-contact-form'}
+            viewSite={'https://react-contact-form-bfug5.ondigitalocean.app/'}
           />
 
           {/* Project 6 */}
