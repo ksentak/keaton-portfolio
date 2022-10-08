@@ -297,7 +297,7 @@ ol {
   top: 12px;
   font-size: 26px;
   line-height: 40px;
-  color: var(--dark);
+  color: var(--redAlt);
   opacity: 1;
   border: none;
   background-color: var(--light);

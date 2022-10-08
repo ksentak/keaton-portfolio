@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectItem from './projectItem';
-import MernShop from '../images/mern-shop.png';
+import EaglesApi from '../images/eagles-api.png';
 import ReactColors from '../images/react-colors.png';
 import VueNotes from '../images/vue-notes.png';
 import SmartCredential from '../images/smart-credential.png';
@@ -33,12 +33,12 @@ const Projects: React.FC = () => {
 
           {/* Project 2 */}
           <ProjectItem
-            imgSrc={MernShop}
-            imgAlt={'Mern Shop'}
-            projectDescription={`E-commerce store front built with the MERN stack. Uses the PayPal API to allow users to 'purchase' items from the store.`}
-            title={'MERNshop'}
-            viewCode={'https://github.com/ksentak/mernshop'}
-            viewSite={'https://mernshop01.herokuapp.com'}
+            imgSrc={EaglesApi}
+            imgAlt={'Eagles API'}
+            projectDescription={`Eagles API is a custom built user interface for an API that I created. The project was developed with React and Material UI. Users can make different API calls based on their input, and players from the Philadelphia Eagles roster will be displayed. The API itself was created with NestJS and is deployed to an AWS Lambda using serverless. Use README to access API code.`}
+            title={'Eagles API'}
+            viewCode={'https://github.com/ksentak/eagles-api-ui'}
+            viewSite={'https://eagles-api.netlify.app/'}
           />
 
           {/* Project 3 */}
