@@ -14,10 +14,17 @@ const Experience: React.FC = () => {
         {/* Row 2 */}
         <div className='row text-start'>
           <ExperienceEntry
+            jobTitle='Software Engineer II'
+            company='Comcast'
+            startDate='Nov 2022'
+            endDate='Present'
+            location='Philadelphia, PA'
+          />
+          <ExperienceEntry
             jobTitle='Software Engineer'
             company='Passport'
             startDate='Jan 2022'
-            endDate='Present'
+            endDate='Oct 2022'
             location='Charlotte, NC (Remote)'
             jobDescription1='Delivers product features for the Permits team using React, Node, and AWS cloud computing tools such Lambda and DynamoDB.'
             jobDescription2='Utilizes test driven development to build functional solutions for requested software features.'
