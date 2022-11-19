@@ -8,7 +8,6 @@ exports.handler = async (event, context, callback) => {
     to: process.env.ADMIN_EMAIL,
     from: process.env.SENDER_EMAIL,
     subject,
-    // html: `${message} \n from ${name} | ${email}`,
     html: `
     <html>
   <head>
