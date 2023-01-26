@@ -13,11 +13,11 @@ const EducationEntry: React.FC<EducationProps> = ({
   degree,
   startDate,
   endDate,
-  description
+  description,
 }) => {
   return (
     <div className='col-12 experience-entry'>
-      <h3 className='education-title mb-1'>{schoolName}</h3>
+      <h3 className='education-title mb-1 alt-green'>{schoolName}</h3>
       <h6 className='education-degree-dates mb-2'>
         {degree}, {startDate} - {endDate}
       </h6>
