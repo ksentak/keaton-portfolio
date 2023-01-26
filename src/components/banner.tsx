@@ -9,39 +9,39 @@ const Banner: React.FC = () => {
       number: {
         value: 75,
         density: {
-          enable: false
-        }
+          enable: false,
+        },
       },
       color: {
-        value: '#36454F'
+        value: '#fff',
       },
       shape: {
         type: 'circle',
         stroke: {
           width: 0,
-          color: '#000000'
+          color: '#000000',
         },
         polygon: {
-          nb_sides: 5
-        }
+          nb_sides: 5,
+        },
       },
       opacity: {
-        value: 0.4
+        value: 0.4,
       },
       size: {
         value: 5,
         random: true,
         anim: {
           speed: 4,
-          size_min: 0.3
-        }
+          size_min: 0.3,
+        },
       },
       move: {
         enable: true,
         random: true,
-        speed: 1
-      }
-    }
+        speed: 1,
+      },
+    },
   };
 
   return (

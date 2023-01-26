@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Keaton Sentak`,
     description: `My personal portfolio site which highlights some of my projects. `,
-    author: `Keaton Sentak`
+    author: `Keaton Sentak`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,8 +10,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -22,10 +22,10 @@ module.exports = {
         name: `keaton-gatsby-portfolio`,
         short_name: `keaton-portfolio`,
         start_url: `https://keatonsentak.com/`,
-        background_color: `#1f2235`,
-        theme_color: `#ff4a57`,
-        icon: `src/images/favicon.png`
-      }
+        background_color: `#2d2d30`,
+        theme_color: `#4ec9b0`,
+        icon: `src/images/favicon.png`,
+      },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
@@ -33,9 +33,9 @@ module.exports = {
         trackingIds: ['G-Q9WM3QN95X'],
         pluginConfig: {
           // Puts tracking script in the head instead of the body
-          head: true
-        }
-      }
-    }
-  ]
+          head: true,
+        },
+      },
+    },
+  ],
 };

@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-interface Data {
+interface FormData {
   name: string;
   email: string;
   subject: string;
@@ -17,7 +17,7 @@ const ContactForm: React.FC = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormData>();
 
   const toastifySuccess = (): void => {
     toast('Form sent!', {
@@ -43,11 +43,11 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const onSubmit = async (data: Data) => {
+  const onSubmit = async (data: FormData) => {
     // Send form email
     try {
       setDisabled(true);
-      const templateParams: Data = {
+      const templateParams: FormData = {
         name: data.name,
         email: data.email,
         subject: data.subject,

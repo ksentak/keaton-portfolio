@@ -19,13 +19,13 @@ const ExperienceEntry: React.FC<ExperienceProps> = ({
   location,
   jobDescription1,
   jobDescription2,
-  jobDescription3
+  jobDescription3,
 }) => {
   return (
     <div className='col-12 experience-entry'>
-      <h3 className='experience-title mb-1'>{jobTitle}</h3>
+      <h3 className='experience-title mb-1 alt-green'>{jobTitle}</h3>
       <h4 className='experience-company mb-1'>{company}</h4>
-      <h6 className='experience-dates-location mb-2'>
+      <h6 className='experience-dates-location mb-3'>
         {startDate} - {endDate}, {location}
       </h6>
       {jobDescription1 && (
