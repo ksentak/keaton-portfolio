@@ -360,8 +360,10 @@ exports.handler = async (event, context, callback) => {
                     <tr>
                       <td>
                         <p>Hi Keaton,</p>
-                        <p>${name} has contacted you from keatonsentak.com. Below is their message and contact information:</p>
-                        <p>${message}</p>
+                        <p>Someone has contacted you from keatonsentak.com. Below is their contact information and message.</p>
+                        <p>Name: ${name}</p>
+                        <p>Email: ${email}</p>
+                        <p>Message: ${message}</p>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                             <tr>
@@ -377,7 +379,6 @@ exports.handler = async (event, context, callback) => {
                             </tr>
                           </tbody>
                         </table>
-                        <p>Contact information: ${name} | ${email}</p>
                         <p>All the best,</p>
                         <p>-Automated message from keatonsentak.com</p>
                       </td>
