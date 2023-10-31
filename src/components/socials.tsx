@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { faStackOverflow } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faMedium } from '@fortawesome/free-brands-svg-icons';
 
 const Socials: React.FC = () => {
@@ -22,24 +22,32 @@ const Socials: React.FC = () => {
           </li>
           {/* GitHub */}
           <li className='social-inline-item'>
-            <a href='https://github.com/ksentak' target='_blank' rel='noopener noreferrer'>
-              <FontAwesomeIcon icon={faGithub} fixedWidth />
-            </a>
-          </li>
-          {/* Stack Overflow */}
-          <li className='social-inline-item'>
             <a
-              href='https://stackoverflow.com/story/ksentak'
+              href='https://github.com/ksentak'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <FontAwesomeIcon icon={faStackOverflow} fixedWidth />
+              <FontAwesomeIcon icon={faGithub} fixedWidth />
+            </a>
+          </li>
+          {/* Medium */}
+          <li className='social-inline-item'>
+            <a
+              href='https://medium.com/@ksentak'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FontAwesomeIcon icon={faMedium} fixedWidth />
             </a>
           </li>
           {/* Email */}
           <li className='social-inline-item'>
-            <a href='https://medium.com/@ksentak' target='_blank' rel='noopener noreferrer'>
-              <FontAwesomeIcon icon={faMedium} fixedWidth />
+            <a
+              href='mailto:mail@keatonsentak.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FontAwesomeIcon icon={faEnvelope} fixedWidth />
             </a>
           </li>
         </ul>

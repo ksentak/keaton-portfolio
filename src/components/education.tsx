@@ -21,7 +21,7 @@ const Education: React.FC = () => {
           />
           <EducationEntry
             schoolName='Rutgers, The State University of New Jersey'
-            degree={`Bachelor's of Science - Biology`}
+            degree={`Bachelor's of Science`}
             startDate='2014'
             endDate='2018'
           />

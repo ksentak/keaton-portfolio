@@ -19,6 +19,11 @@ const Experience: React.FC = () => {
             startDate='Nov 2022'
             endDate='Present'
             location='Philadelphia, PA'
+            jobDescriptions={[
+              `Championed open-source initiatives by enriching an established community project and assisted in the transition of a proprietary system to open source, ensuring adherence to licensing compliance.`,
+              `Developed custom functionalities for test reports, elevating the visibility and understanding of test outcomes.`,
+              `Engaged in cooperative efforts with multidisciplinary teams to pinpoint project needs, resolve complex problems, and deliver superior software solutions aligned with company objectives.`,
+            ]}
           />
           <ExperienceEntry
             jobTitle='Software Engineer'
@@ -26,30 +31,25 @@ const Experience: React.FC = () => {
             startDate='Jan 2022'
             endDate='Oct 2022'
             location='Charlotte, NC (Remote)'
-            jobDescription1='Delivers product features for the Permits team using React, Node, and AWS cloud computing tools such Lambda and DynamoDB.'
-            jobDescription2='Utilizes test driven development to build functional solutions for requested software features.'
-            jobDescription3='Works on an agile development team that defines, evaluates,
-            prioritizes, and completes user stories in 2-week sprints.'
+            jobDescriptions={[
+              `Delivered product features for the Permits team using React, Node, & AWS cloud computing tools such
+              as DynamoDB and Lambda.`,
+              `Utilized test-driven development to build functional solutions for requested software features.`,
+              `Worked on an agile development team that defined, evaluated, prioritized, and completed user stories in two-week sprints.`,
+            ]}
           />
           <ExperienceEntry
-            jobTitle='Software Development Manager'
-            company='MacguyverTech'
-            startDate='Jul 2021'
-            endDate='Jan 2022'
-            location='Glenolden, PA (Remote)'
-            jobDescription1='Mapped out daily and weekly tasks for the development team and oversaw multiple client projects throughout their lifecycles.'
-            jobDescription2='Developed a more efficient process to deploy applications on to cloud-based servers.'
-            jobDescription3={`Established an improved onboarding process to help new developers better assimilate to the company's code base and development practices.`}
-          />
-          <ExperienceEntry
-            jobTitle='Software Developer'
+            jobTitle='Software Developer/Development Manager'
             company='MacguyverTech'
             startDate='Jul 2020'
-            endDate='Jul 2021'
+            endDate='Jan 2022'
             location='Glenolden, PA (Remote)'
-            jobDescription1='Delivered performance-driven and user-centric websites that met all business requirements.'
-            jobDescription2='Implemented enhancements to existing applications that fixed errors and improved applications functionality and speed.'
-            jobDescription3='Built and documented RESTful APIs.'
+            jobDescriptions={[
+              `Progressed from Software Developer to Development Manager, leading software development lifecycle from conceptualization to deployment.`,
+              `Developed a more efficient process to deploy applications to cloud-based servers.`,
+              `Spearheaded enhancements to existing applications, rectifying errors, and boosting functionality and performance.`,
+              `Designed and maintained RESTful APIs, ensuring robust documentation and ease of integration for front-end applications.`,
+            ]}
           />
         </div>
       </div>
