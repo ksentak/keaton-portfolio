@@ -1,5 +1,5 @@
 import React from 'react';
-import Headshot from '../images/profile-headshot.jpg';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Info: React.FC = () => {
   return (
@@ -35,7 +35,11 @@ const Info: React.FC = () => {
             </a>
           </div>
           <div className='col-md-6 mb-3'>
-            <img src={Headshot} className='profile-picture' alt='Profile' />
+            <StaticImage
+              src='../images/profile-headshot.jpg'
+              className='profile-picture'
+              alt='Profile'
+            />
           </div>
         </div>
       </div>

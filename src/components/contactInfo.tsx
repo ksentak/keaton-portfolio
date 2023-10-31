@@ -18,20 +18,7 @@ const ContactInfo: React.FC = () => {
         </div>
         {/* Row 2 */}
         <div className='row'>
-          <div className='col-lg-4'>
-            <div className='contact-info'>
-              <div className='phone-info'>
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  className='contact-icon'
-                  fixedWidth
-                ></FontAwesomeIcon>
-                <span>Give me a call:</span>
-                <p>(609) 439-3423</p>
-              </div>
-            </div>
-          </div>
-          <div className='col-lg-4'>
+          <div className='col-lg-6'>
             <div className='contact-info'>
               <div className='email-info'>
                 <FontAwesomeIcon
@@ -44,7 +31,7 @@ const ContactInfo: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className='col-lg-4'>
+          <div className='col-lg-6'>
             <div className='contact-info'>
               <div className='location-info'>
                 <FontAwesomeIcon
