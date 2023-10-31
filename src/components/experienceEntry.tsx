@@ -6,9 +6,7 @@ interface ExperienceProps {
   startDate: string;
   endDate: string;
   location: string;
-  jobDescription1?: string;
-  jobDescription2?: string;
-  jobDescription3?: string;
+  jobDescriptions: string[];
 }
 
 const ExperienceEntry: React.FC<ExperienceProps> = ({
@@ -17,9 +15,7 @@ const ExperienceEntry: React.FC<ExperienceProps> = ({
   startDate,
   endDate,
   location,
-  jobDescription1,
-  jobDescription2,
-  jobDescription3,
+  jobDescriptions,
 }) => {
   return (
     <div className='col-12 experience-entry'>
@@ -28,15 +24,12 @@ const ExperienceEntry: React.FC<ExperienceProps> = ({
       <h6 className='experience-dates-location mb-3'>
         {startDate} - {endDate}, {location}
       </h6>
-      {jobDescription1 && (
-        <p className='experience-description'>- {jobDescription1}</p>
-      )}
-      {jobDescription2 && (
-        <p className='experience-description'>- {jobDescription2}</p>
-      )}
-      {jobDescription3 && (
-        <p className='experience-description'>- {jobDescription3}</p>
-      )}
+      {jobDescriptions &&
+        jobDescriptions.map((desc, index) => (
+          <p key={index} className='experience-description'>
+            - {desc}
+          </p>
+        ))}
     </div>
   );
 };

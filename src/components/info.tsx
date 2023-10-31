@@ -27,7 +27,7 @@ const Info: React.FC = () => {
               solve programming challenges that benefit the end user.
             </p>
             <a
-              href={`Keaton-Sentak-Resume.pdf`}
+              href={`keaton-sentak-resume.pdf`}
               target='_blank'
               rel='noopener noreferrer'
             >
