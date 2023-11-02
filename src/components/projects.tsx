@@ -68,7 +68,7 @@ const Projects: React.FC = () => {
             projectDescription={`React Contact Form is an application that was built to serve as a template to those who want to create a contact form in react without any back-end code.`}
             title={'React Contact Form'}
             viewCode={'https://github.com/ksentak/react-contact-form'}
-            viewSite={'https://react-contact-form-bfug5.ondigitalocean.app/'}
+            viewSite={'https://react-contact-form-01.netlify.app/'}
           />
 
           {/* Project 6 */}
