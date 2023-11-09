@@ -30,7 +30,7 @@ const Experience: React.FC = () => {
             company='Passport'
             startDate='Jan 2022'
             endDate='Oct 2022'
-            location='Charlotte, NC (Remote)'
+            location='Charlotte, NC (Contract)'
             jobDescriptions={[
               `Delivered product features for the Permits team using React, Node, & AWS cloud computing tools such
               as DynamoDB and Lambda.`,
@@ -43,7 +43,7 @@ const Experience: React.FC = () => {
             company='MacguyverTech'
             startDate='Jul 2020'
             endDate='Jan 2022'
-            location='Glenolden, PA (Remote)'
+            location='Glenolden, PA'
             jobDescriptions={[
               `Progressed from Software Developer to Development Manager, leading software development lifecycle from conceptualization to deployment.`,
               `Developed a more efficient process to deploy applications to cloud-based servers.`,
