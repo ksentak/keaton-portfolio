@@ -1,0 +1,73 @@
+---
+
+---
+
+<mode-toggle class='flex'>
+  <button
+    class='justify-center ml-4 inline-flex h-7 w-7 items-center rounded-xl hover:bg-slate-200 hover dark:hover:bg-neutral-500'
+    id='mode-toggle'
+    role='switch'
+    type='button'
+    tabindex='0'
+    aria-checked='false'
+  >
+    <span class='sr-only'>Toggle dark mode</span>
+    <i id='mode-icon' class='fa fa-moon'></i>
+    <!-- Default icon -->
+  </button>
+</mode-toggle>
+
+<script>
+  function updateHTMLTheme(mode: 'light' | 'dark') {
+    if (mode === 'dark') {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+    }
+  }
+
+  function updateStorageTheme(mode: 'light' | 'dark') {
+    if (mode === 'dark') {
+      sessionStorage.setItem('theme', 'dark');
+    } else {
+      sessionStorage.setItem('theme', 'light');
+    }
+  }
+
+  class ModeToggle extends HTMLElement {
+    constructor() {
+      super();
+      let currentMode = document.documentElement.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      const toggle = this.querySelector('button');
+      const iconElem = toggle?.querySelector('#mode-icon');
+
+      // Set the initial icon
+      if (currentMode === 'dark') {
+        iconElem.classList.replace('fa-moon', 'fa-sun');
+      }
+
+      toggle?.addEventListener('click', () => {
+        if (currentMode === 'dark') {
+          iconElem.classList.replace('fa-sun', 'fa-moon');
+          updateHTMLTheme('light');
+          updateStorageTheme('light');
+          currentMode = 'light';
+        } else {
+          iconElem.classList.replace('fa-moon', 'fa-sun');
+          updateHTMLTheme('dark');
+          updateStorageTheme('dark');
+          currentMode = 'dark';
+        }
+      });
+    }
+  }
+
+  customElements.define('mode-toggle', ModeToggle);
+</script>
+
+<style></style>
