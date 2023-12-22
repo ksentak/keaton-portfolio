@@ -1,0 +1,35 @@
+---
+// Function to get the current year
+const getCurrentYear = () => {
+  return new Date().getFullYear();
+};
+
+const currentYear = getCurrentYear();
+---
+
+<footer class='text-sm leading-[1.75] mt-4'>
+  <div>
+    <!-- Blue Gradient Styled Name -->
+    <span
+      class='gradient-text font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-main to-primary-secondary'
+    >
+      Copyright © {currentYear} Keaton Sentak
+    </span>
+  </div>
+</footer>
+
+<style>
+  footer {
+    grid-area: footer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+</style>

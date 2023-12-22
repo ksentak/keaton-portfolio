@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+    Tailwind colors listed here: https://tailwindcss.com/docs/customizing-colors
+    
+    Why colors are written in rgb format (255 255 255) instead of hex (#ffffff)
+    https://tailwindcss.com/docs/customizing-colors#using-css-variables 
+*/
+@layer base {
+    /* light theme */
+    .base-theme { 
+        /* Tailwind emerald-400 #34d399 */
+        --color-main: 52 211 153;  
+        /* Tailwind cyan-400 #22d3ee */
+        --color-secondary: 34 211 238;  
+         /* Custom light black #333333 */
+        --color-text-body: 51 51 51;
+        /* Custom light black #333333 */
+        --color-text-heading: 51 51 51;
+        /* Custom light black #333333 */
+        --color-text-bold: 51 51 51;
+        /* Tailwind cyan-500 #06b6d4 */
+        --color-text-link: 6 182 212;
+        /* black */
+        --color-text-code: 0 0 0;
+        /* black */
+        --color-text-selection: 0 0 0;
+        /* white */
+        --color-bg-body: 255 255 255;
+        /* Tailwind emerald-200 #a7f3d0 */
+        --color-bg-selection: 94 234 212;
+    }
+
+    /* dark theme */
+    .base-theme.dark {
+        /* Tailwind pink-500 #ec4899 */
+        --color-main: 236 72 153;  
+        /* Tailwind amber-500 #f59e0b */
+        --color-secondary: 245 158 11;  
+        /* Tailwind slate-300 */
+        --color-text-body: 203 213 225;
+        /* white */
+        --color-text-heading: 255 255 255;
+        /* white */
+        --color-text-bold: 255 255 255;
+        /* Tailwind blue-400 #60a5fa */
+        --color-text-link: 96 165 250;
+        /* black */
+        --color-text-code: 255 255 255;
+        /* black */
+        --color-text-selection: 0 0 0;
+        /* Lighter black for newspaper feel */
+        --color-bg-body: 40 40 40;
+        /* Tailwind orange-300 #fdba74 */
+        --color-bg-selection: 253 186 116;
+    }
+
+    :root {
+        font-family: theme('fontFamily.body');
+        background-color: theme('colors.bg.body');
+        color: theme('colors.text.body');
+        /* base font-size 1px larger for better visibility */
+        font-size: 1.125em;
+        line-height: 1.85;
+        scroll-behavior: smooth;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: theme('fontFamily.heading');
+    }
+}
+
+@layer components {
+
+    /* ------ GLOBAL STYLES - START ------ */
+    strong {
+        font-weight: 600;
+        color: theme('colors.text.bold');
+    }
+
+    mark {
+        background-color: theme('colors.bg.selection');
+        color: theme('colors.text.selection');
+    } 
+
+    ::selection {
+        background: theme('colors.bg.selection');
+        color: theme('colors.text.selection');
+    }
+    /* ------ GLOBAL STYLES - END ------ */
+}
