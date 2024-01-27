@@ -12,7 +12,7 @@ module.exports = {
         transparent: 'transparent',
         primary: {
           main: 'rgb(var(--color-main) / <alpha-value>)',
-          secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+          accent: 'rgb(var(--color-accent) / <alpha-value>)',
         },
         text: {
           body: 'rgb(var(--color-text-body) / <alpha-value>)',
