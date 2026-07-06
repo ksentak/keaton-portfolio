@@ -1,6 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-body: "Space Grotesk", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+
+  --color-primary-main: rgb(var(--val-main));
+  --color-primary-accent: rgb(var(--val-accent));
+
+  --color-text-body: rgb(var(--val-text-body));
+  --color-text-bold: rgb(var(--val-text-bold));
+  --color-text-heading: rgb(var(--val-text-heading));
+  --color-text-link: rgb(var(--val-text-link));
+  --color-text-selection: rgb(var(--val-text-selection));
+
+  --color-bg-body: rgb(var(--val-bg-body));
+  --color-bg-selection: rgb(var(--val-bg-selection));
+}
 
 /* 
     Tailwind colors listed here: https://tailwindcss.com/docs/customizing-colors
@@ -12,55 +30,55 @@
     /* light theme */
     .base-theme { 
         /* Tailwind amber-200 */
-        --color-main: 253 230 138;  
+        --val-main: 253 230 138;  
         /* Tailwind cyan-400 #22d3ee */
-        --color-accent: 253 230 138;  
+        --val-accent: 253 230 138;  
          /* Custom light black #333333 */
-        --color-text-body: 51 51 51;
+        --val-text-body: 51 51 51;
         /* Custom light black #333333 */
-        --color-text-heading: 51 51 51;
+        --val-text-heading: 51 51 51;
         /* Custom light black #333333 */
-        --color-text-bold: 51 51 51;
+        --val-text-bold: 51 51 51;
         /* Tailwind cyan-500 #06b6d4 */
-        --color-text-link: 6 182 212;
+        --val-text-link: 6 182 212;
         /* black */
-        --color-text-code: 0 0 0;
+        --val-text-code: 0 0 0;
         /* black */
-        --color-text-selection: 0 0 0;
+        --val-text-selection: 0 0 0;
         /* softer white like newspaper */
-        --color-bg-body: 250 250 250;
+        --val-bg-body: 250 250 250;
         /* Tailwind amber-200 */
-        --color-bg-selection: 253 230 138;
+        --val-bg-selection: 253 230 138;
     }
 
     /* dark theme */
     .base-theme.dark {
         /* Tailwind blue-900 */
-        --color-main: 30 58 138;  
+        --val-main: 30 58 138;  
         /* Tailwind blue-500 */
-        --color-accent: 59 130 246;  
+        --val-accent: 59 130 246;  
         /* Tailwind slate-300 */
-        --color-text-body: 203 213 225;
+        --val-text-body: 203 213 225;
         /* white */
-        --color-text-heading: 255 255 255;
+        --val-text-heading: 255 255 255;
         /* white */
-        --color-text-bold: 255 255 255;
+        --val-text-bold: 255 255 255;
         /* Tailwind blue-400 #60a5fa */
-        --color-text-link: 96 165 250;
+        --val-text-link: 96 165 250;
         /* black */
-        --color-text-code: 255 255 255;
+        --val-text-code: 255 255 255;
         /* black */
-        --color-text-selection: 0 0 0;
+        --val-text-selection: 0 0 0;
         /* Lighter black for newspaper feel */
-        --color-bg-body: 40 40 40;
+        --val-bg-body: 40 40 40;
         /* Tailwind indigo-100 */
-        --color-bg-selection: 224 231 255;
+        --val-bg-selection: 224 231 255;
     }
 
     :root {
-        font-family: theme('fontFamily.body');
-        background-color: theme('colors.bg.body');
-        color: theme('colors.text.body');
+        font-family: var(--font-body);
+        background-color: var(--color-bg-body);
+        color: var(--color-text-body);
         /* base font-size 1px larger for better visibility */
         font-size: 1.125em;
         line-height: 1.85;
@@ -73,7 +91,7 @@
     h4,
     h5,
     h6 {
-        font-family: theme('fontFamily.heading');
+        font-family: var(--font-heading);
     }
 }
 
@@ -82,17 +100,70 @@
     /* ------ GLOBAL STYLES - START ------ */
     strong {
         font-weight: 600;
-        color: theme('colors.text.bold');
+        color: var(--color-text-bold);
     }
 
     mark {
-        background-color: theme('colors.bg.selection');
-        color: theme('colors.text.selection');
+        background-color: var(--color-bg-selection);
+        color: var(--color-text-selection);
     } 
 
     ::selection {
-        background: theme('colors.bg.selection');
-        color: theme('colors.text.selection');
+        background: var(--color-bg-selection);
+        color: var(--color-text-selection);
     }
     /* ------ GLOBAL STYLES - END ------ */
+}
+
+@layer utilities {
+  .prose {
+    & a {
+      text-decoration: none;
+      background-repeat: no-repeat;
+      background-size: 100% 1.5px;
+      background-position: 0 100%;
+      background-image: linear-gradient(to right, rgb(var(--val-text-link)), rgb(var(--val-text-link)));
+      &:hover {
+        color: rgb(var(--val-text-link));
+      }
+    }
+    & h1, & h2, & h3, & h4, & h5 {
+      color: rgb(var(--val-text-heading));
+    }
+    & code::before {
+      content: none;
+    }
+    & code::after {
+      content: none;
+    }
+    & blockquote {
+      border: none;
+      position: relative;
+      width: 96%;
+      margin: 0 auto;
+      font-size: 1.0625em;
+      padding-top: 1.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    & blockquote::before {
+      font-family: Arial;
+      content: "“";
+      font-size: 4em;
+      color: rgb(var(--val-text-bold));
+      position: absolute;
+      left: -10px;
+      top: -10px;
+    }
+    & blockquote::after {
+      content: "";
+    }
+    & blockquote p:first-of-type::before {
+      content: "";
+    }
+    & blockquote p:last-of-type::after {
+      content: "";
+    }
+  }
 }
