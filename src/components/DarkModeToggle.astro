@@ -4,7 +4,7 @@
 
 <mode-toggle class='flex'>
   <button
-    class='justify-center ml-4 inline-flex h-7 w-7 items-center rounded-xl hover:bg-slate-200 hover dark:hover:bg-neutral-500'
+    class='cursor-pointer justify-center ml-4 inline-flex h-7 w-7 items-center rounded-xl hover:bg-slate-200 dark:hover:bg-neutral-500'
     id='mode-toggle'
     role='switch'
     type='button'
@@ -48,17 +48,17 @@
 
       // Set the initial icon
       if (currentMode === 'dark') {
-        iconElem.classList.replace('fa-moon', 'fa-sun');
+        iconElem?.classList.replace('fa-moon', 'fa-sun');
       }
 
       toggle?.addEventListener('click', () => {
         if (currentMode === 'dark') {
-          iconElem.classList.replace('fa-sun', 'fa-moon');
+          iconElem?.classList.replace('fa-sun', 'fa-moon');
           updateHTMLTheme('light');
           updateStorageTheme('light');
           currentMode = 'light';
         } else {
-          iconElem.classList.replace('fa-moon', 'fa-sun');
+          iconElem?.classList.replace('fa-moon', 'fa-sun');
           updateHTMLTheme('dark');
           updateStorageTheme('dark');
           currentMode = 'dark';
